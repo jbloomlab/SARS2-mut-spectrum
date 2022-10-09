@@ -21,6 +21,8 @@ rule get_mat_tree:
         url=config["mat_tree"],
     output:
         mat="results/mat/mat_tree.pb.gz"
+    conda:
+        "environment.yml"
     shell:
         "curl {params.url} > {output.mat}"
 
@@ -31,6 +33,8 @@ rule get_ref_fasta:
         url=config["ref_fasta"],
     output:
         ref_fasta="results/ref/ref.fa",
+    conda:
+        "environment.yml"
     shell:
         "wget -O - {params.url} | gunzip -c > {output.ref_fasta}"
 
@@ -41,6 +45,8 @@ rule get_ref_gtf:
         url=config["ref_gtf"],
     output:
         ref_gtf="results/ref/ref.gtf",
+    conda:
+        "environment.yml"
     shell:
         "wget -O - {params.url} | gunzip -c > {output.ref_gtf}"
 
@@ -51,6 +57,8 @@ rule ref_coding_sites:
         gtf=rules.get_ref_gtf.output.ref_gtf
     output:
         csv="results/ref/coding_sites.csv",
+    conda:
+        "environment.yml"
     script:
         "scripts/ref_coding_sites.py"
 
@@ -64,6 +72,8 @@ checkpoint mat_samples:
         clade_counts="results/mat/sample_clade_counts.csv",
     params:
         min_clade_samples=config["min_clade_samples"],
+    conda:
+        "environment.yml"
     script:
         "scripts/mat_samples.py"
 
@@ -103,6 +113,8 @@ rule mat_clade_subset:
         samples=rules.samples_by_clade_subset.output.txt,
     output:
         mat="results/mat_by_clade_subset/{clade}_{subset}.pb",
+    conda:
+        "environment.yml"
     shell:
         """
         if [ -s {input.samples} ]; then
@@ -123,6 +135,8 @@ rule translate_mat:
         ref_gtf=rules.get_ref_gtf.output.ref_gtf,
     output:
         tsv="results/mat_by_clade_subset/{clade}_{subset}_mutations.tsv",
+    conda:
+        "environment.yml"
     shell:
         """
         matUtils summary \
@@ -139,6 +153,8 @@ rule clade_founder_json:
         url=config["clade_founder_json"],
     output:
         json="results/clade_founders_no_indels/clade_founders.json",
+    conda:
+        "environment.yml"
     shell:
         "curl {params.url} > {output.json}"
 
@@ -151,6 +167,8 @@ rule clade_founder_fasta_and_muts:
     output:
         fasta="results/clade_founders_no_indels/{clade}.fa",
         muts="results/clade_founders_no_indels/{clade}_ref_to_founder_muts.csv",
+    conda:
+        "environment.yml"
     script:
         "scripts/clade_founder_fasta.py"
 
@@ -172,6 +190,8 @@ rule count_mutations:
         sites_to_exclude=config["sites_to_exclude"],
     log:
         notebook="results/mutation_counts/{clade}_{subset}_count_mutations.ipynb",
+    conda:
+        "environment.yml"
     notebook:
         "notebooks/count_mutations.py.ipynb"
 
@@ -186,6 +206,8 @@ rule clade_founder_nts:
         ],
     output:
         csv="results/clade_founder_nts/clade_founder_nts.csv",
+    conda:
+        "environment.yml"
     script:
         "scripts/clade_founder_nts.py"
 
@@ -201,6 +223,8 @@ rule aggregate_mutation_counts:
         ],
     output:
         csv="results/mutation_counts/aggregated.csv",
+    conda:
+        "environment.yml"
     script:
         "scripts/aggregate_mutation_counts.py"
 
@@ -230,6 +254,8 @@ rule synonymous_mut_rates:
         config["synonymous_spectra_min_counts"],
         config['sample_subsets'],
         config["clade_synonyms"],
+    conda:
+        "environment.yml"
     shell:
         """
         papermill {input.nb} {output.nb} \
@@ -253,8 +279,31 @@ rule clade_founder_tree:
         dist_matrix="results/clade_founder_tree/clade_founders.mldist",
     params:
         prefix=lambda wc, output: os.path.splitext(output.tree)[0]
+    conda:
+        "environment.yml"
     shell:
         """
         cat {input.fastas} > {output.alignment}
         iqtree -s {output.alignment} --prefix {params.prefix}
+        """
+
+
+rule draw_tree_w_mut_enrichments:
+    """Draw tree of clade founder sequences with mutation rate enrichments."""
+    input:
+        tree=rules.clade_founder_tree.output.tree,
+        rates_by_clade=rules.synonymous_mut_rates.output.rates_by_clade,
+        nb="notebooks/draw_tree_w_mut_enrichment.ipynb",
+    output:
+        nb="results/clade_founder_tree/draw_tree_w_mut_enrichment.ipynb",
+        enrichment_plots=directory("results/clade_founder_tree/enrichment_plots"),
+    params:
+        config["clade_synonyms"],
+    conda:
+        "environment_ete.yml"
+    shell:
+        """
+        papermill {input.nb} {output.nb} \
+            -p treefile {input.tree} \
+            -p rates_by_clade_csv {input.rates_by_clade}
         """
