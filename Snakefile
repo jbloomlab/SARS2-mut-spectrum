@@ -12,6 +12,7 @@ rule all:
     input:
         "results/synonymous_mut_rates/rates_by_clade.csv",
         "results/synonymous_mut_rates/synonymous_mut_rates.html",
+        "results/clade_founder_tree/clade_founders.treefile",
 
 
 rule get_mat_tree:
@@ -236,4 +237,24 @@ rule synonymous_mut_rates:
             -p clade_founder_nts_csv {input.clade_founder_nts_csv} \
             -p rates_by_clade_csv {output.rates_by_clade}
         jupyter nbconvert {output.nb} --to html
+        """
+
+
+rule clade_founder_tree:
+    """Build a tree of the clade founder sequences."""
+    input:
+        fastas=lambda wc: [
+            f"results/clade_founders_no_indels/{clade}.fa"
+            for clade in clades_w_adequate_counts(wc)
+        ],
+    output:
+        alignment="results/clade_founder_tree/clade_founder_alignment.fa",
+        tree="results/clade_founder_tree/clade_founders.treefile",
+        dist_matrix="results/clade_founder_tree/clade_founders.mldist",
+    params:
+        prefix=lambda wc, output: os.path.splitext(output.tree)[0]
+    shell:
+        """
+        cat {input.fastas} > {output.alignment}
+        iqtree -s {output.alignment} --prefix {params.prefix}
         """
