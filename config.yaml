@@ -58,3 +58,20 @@ sites_to_exclude:
 # for analysis of 4-fold synonymous mutation spectra/rates, only keep clade subsets with
 # at least this many non-excluded mutation counts
 synonymous_spectra_min_counts: 5000
+
+# Define common names of Nexstrain clades
+clade_synonyms:
+  20A: B.1
+  20B: B.1.1
+  20C: B.1.367
+  20E: B.1.177
+  20G: B.1.2
+  20I: Alpha
+  21C: Epsilon
+  21I: Delta
+  21J: Delta
+  21K: Omicron BA.1
+  21M: Omicron
+  22A: Omicron BA.4
+  22B: Omicron BA.5
+  22C: Omicron BA.2.12.1

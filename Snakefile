@@ -214,14 +214,22 @@ rule synonymous_mut_rates:
         rates_by_clade="results/synonymous_mut_rates/rates_by_clade.csv",
         nb="results/synonymous_mut_rates/synonymous_mut_rates.ipynb",
         nb_html="results/synonymous_mut_rates/synonymous_mut_rates.html",
+        **{
+            chart_name: f"results/synonymous_mut_rates/{chart_name}_chart.html"
+            for chart_name in [
+                "all_samples_whole_genome",
+                "all_samples_whole_genome_top_mutations",
+                "by_region_whole_genome",
+                "all_samples_partitioned_genome",
+            ]
+        }
     params:
-        synonymous_spectra_min_counts=config["synonymous_spectra_min_counts"],
-        subset_order="{subset_order: " + str(list(config['sample_subsets'])) + "}",
+        config["synonymous_spectra_min_counts"],
+        config['sample_subsets'],
+        config["clade_synonyms"],
     shell:
         """
         papermill {input.nb} {output.nb} \
-            -p synonymous_spectra_min_counts {params.synonymous_spectra_min_counts} \
-            -y "{params.subset_order}" \
             -p mutation_counts_csv {input.mutation_counts_csv} \
             -p clade_founder_nts_csv {input.clade_founder_nts_csv} \
             -p rates_by_clade_csv {output.rates_by_clade}
