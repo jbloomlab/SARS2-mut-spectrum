@@ -222,7 +222,9 @@ rule synonymous_mut_rates:
                 "by_region_whole_genome",
                 "all_samples_partitioned_genome",
             ]
-        }
+        },
+        p_value_chart="results/synonymous_mut_rates/p_value_chart.html",
+        frac_rate_chart="results/synonymous_mut_rates/frac_rate_chart.html",
     params:
         config["synonymous_spectra_min_counts"],
         config['sample_subsets'],
