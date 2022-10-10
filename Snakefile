@@ -294,7 +294,7 @@ rule draw_tree_w_mut_enrichments:
     input:
         tree=rules.clade_founder_tree.output.tree,
         rates_by_clade=rules.synonymous_mut_rates.output.rates_by_clade,
-        nb="notebooks/draw_tree_w_mut_enrichment.ipynb",
+        nb="notebooks/draw_tree_w_mut_enrichments.ipynb",
     output:
         nb="results/clade_founder_tree/draw_tree_w_mut_enrichment.ipynb",
         tree_image="results/clade_founder_tree/tree_w_enrichments.png",
@@ -302,7 +302,7 @@ rule draw_tree_w_mut_enrichments:
     params:
         config["clade_synonyms"],
     conda:
-        "environment_ete.yml"
+        "environment_ete3.yml"
     shell:
         """
         papermill {input.nb} {output.nb} \
