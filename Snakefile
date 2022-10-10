@@ -13,6 +13,7 @@ rule all:
         "results/synonymous_mut_rates/rates_by_clade.csv",
         "results/synonymous_mut_rates/synonymous_mut_rates.html",
         "results/clade_founder_tree/clade_founders.treefile",
+        "results/clade_founder_tree/tree_w_enrichments.png",
 
 
 rule get_mat_tree:
