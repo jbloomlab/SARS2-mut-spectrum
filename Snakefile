@@ -296,7 +296,8 @@ rule draw_tree_w_mut_enrichments:
         nb="notebooks/draw_tree_w_mut_enrichment.ipynb",
     output:
         nb="results/clade_founder_tree/draw_tree_w_mut_enrichment.ipynb",
-        enrichment_plots=directory("results/clade_founder_tree/enrichment_plots"),
+        tree_image="results/clade_founder_tree/tree_w_enrichments.png",
+        enrichment_plots=temp(directory("results/clade_founder_tree/enrichment_plots")),
     params:
         config["clade_synonyms"],
     conda:
@@ -305,5 +306,6 @@ rule draw_tree_w_mut_enrichments:
         """
         papermill {input.nb} {output.nb} \
             -p treefile {input.tree} \
-            -p rates_by_clade_csv {input.rates_by_clade}
+            -p rates_by_clade_csv {input.rates_by_clade} \
+            -p tree_image {output.tree_image}
         """
