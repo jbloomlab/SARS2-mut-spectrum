@@ -21,9 +21,10 @@ That command will create a `conda` environment named `SARS2-mut-spectrum` which 
 
 Then run the [snakemake](https://snakemake.readthedocs.io/) pipeline in [Snakefile](Snakefile), which reads its configuration from [config.yaml](config.yaml) by running:
 
-    snakemake -j <n_cpus>
+    snakemake -j <n_cpus> --use-conda
 
 where `<n_cpus>` is the number of CPUs to use.
+You need the `--use-conda` command because although almost all the pipeline is run by the `SARS2-mut-spectrum` `conda` environment in [environment.yml](environment.yml), the drawing of the tree using [ete3](http://etetoolkit.org/) uses the `conda` environment in [environment_ete3.yml](environment_ete3.yml).
 
 Note that the pipeline uses Python scripts in [./scripts/](scripts) and Jupyter notebooks in [./notebooks/](notebooks).
 
@@ -71,6 +72,13 @@ For all of these analyses, we only include subsets/partitions with at least the 
 
 Most of the analysis of the synonymous mutation spectrum is done by [notebooks/synonymous_mut_rates.ipynb](notebooks/synonymous_mut_rates.ipynb).
 You can look at the HTML rendering of running that Jupyter notebook at [results/synonymous_mut_rates/synonymous_mut_rates.html](results/synonymous_mut_rates/synonymous_mut_rates.html): download and open that notebook to look at the interactive `altair` plots.
+
+### Drawing of tree
+
+We draw a tree of the clade founder sequences.
+The tree itself is in [results/clade_founder_tree/clade_founders.treefile](results/clade_founder_tree/clade_founders.treefile), and a matrix of the distances between clade founders is in [results/clade_founder_tree/clade_founders.mldist](results/clade_founder_tree/clade_founders.mldist).
+
+The notebook [draw_tree_w_mut_enrichments.ipynb](draw_tree_w_mut_enrichments.ipynb), which requires the `conda` environment in [environment_ete3.yml](environment_ete3.yml), draws the tree in [results/clade_founder_tree/tree_w_enrichments.png](results/clade_founder_tree/tree_w_enrichments.png), which has nodes plotted with change in relative mutation rate (absolute difference relative to reference clade, which is first listed).
 
 ### Caveats of analysis
 None of these are expected to seriously affect the accuracy of the current analysis, but they could become problematic if the same analysis is applied to substantially more diverged clades:
