@@ -17,3 +17,9 @@ results/mutation_counts/*
 !results/clade_founder_nts
 results/clade_founder_nts/*
 !results/clade_founder_nts/clade_founder_nts.csv
+
+!results/clade_founder_tree
+results/clade_founder_tree/*
+!results/clade_founder_tree/clade_founders.treefile
+!results/clade_founder_tree/clade_founders.mldist
+!results/clade_founder_tree/tree_w_enrichments.png

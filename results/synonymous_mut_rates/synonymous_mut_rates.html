@@ -14608,9 +14608,9 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mutation_counts_csv</span> <span class="o">=</span> <span class="s2">"../results/mutation_counts/aggregated.csv"</span>
-<span class="n">clade_founder_nts_csv</span> <span class="o">=</span> <span class="s2">"../results/clade_founder_nts/clade_founder_nts.csv"</span>
-<span class="n">rates_by_clade_csv</span> <span class="o">=</span> <span class="s2">"../results/synonymous_mut_rates/rates_by_clade.csv"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mutation_counts_csv</span> <span class="o">=</span> <span class="s2">&quot;../results/mutation_counts/aggregated.csv&quot;</span>
+<span class="n">clade_founder_nts_csv</span> <span class="o">=</span> <span class="s2">&quot;../results/clade_founder_nts/clade_founder_nts.csv&quot;</span>
+<span class="n">rates_by_clade_csv</span> <span class="o">=</span> <span class="s2">&quot;../results/synonymous_mut_rates/rates_by_clade.csv&quot;</span>
 </pre></div>
 
      </div>
@@ -14627,9 +14627,9 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Parameters</span>
-<span class="n">mutation_counts_csv</span> <span class="o">=</span> <span class="s2">"results/mutation_counts/aggregated.csv"</span>
-<span class="n">clade_founder_nts_csv</span> <span class="o">=</span> <span class="s2">"results/clade_founder_nts/clade_founder_nts.csv"</span>
-<span class="n">rates_by_clade_csv</span> <span class="o">=</span> <span class="s2">"results/synonymous_mut_rates/rates_by_clade.csv"</span>
+<span class="n">mutation_counts_csv</span> <span class="o">=</span> <span class="s2">&quot;results/mutation_counts/aggregated.csv&quot;</span>
+<span class="n">clade_founder_nts_csv</span> <span class="o">=</span> <span class="s2">&quot;results/clade_founder_nts/clade_founder_nts.csv&quot;</span>
+<span class="n">rates_by_clade_csv</span> <span class="o">=</span> <span class="s2">&quot;results/synonymous_mut_rates/rates_by_clade.csv&quot;</span>
 </pre></div>
 
      </div>
@@ -14699,12 +14699,12 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"config.yaml"</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">"config.yaml"</span><span class="p">)</span> <span class="k">else</span> <span class="s2">"../config.yaml"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.yaml&quot;</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&quot;config.yaml&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;../config.yaml&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     
-<span class="n">synonymous_spectra_min_counts</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">"synonymous_spectra_min_counts"</span><span class="p">]</span>
-<span class="n">subset_order</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">"sample_subsets"</span><span class="p">])</span>
-<span class="n">clade_synonyms</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">"clade_synonyms"</span><span class="p">]</span>
+<span class="n">synonymous_spectra_min_counts</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;synonymous_spectra_min_counts&quot;</span><span class="p">]</span>
+<span class="n">subset_order</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;sample_subsets&quot;</span><span class="p">])</span>
+<span class="n">clade_synonyms</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;clade_synonyms&quot;</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14733,7 +14733,7 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mutation_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">mutation_counts_csv</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-    <span class="n">mut_type</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"nt_mutation"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">to</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">mut_type</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;nt_mutation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">to</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -14768,39 +14768,39 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 
 <span class="n">mutation_freqs</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">mutation_counts</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"subset == 'all'"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;subset == &#39;all&#39;&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">top_n</span><span class="p">)</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-        <span class="n">freq</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">)[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">"sum"</span><span class="p">),</span>
-        <span class="n">rank</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">)[</span><span class="s2">"freq"</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"first"</span><span class="p">),</span>
-        <span class="n">exclude</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"exclude"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s2">"yes"</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s2">"no"</span><span class="p">}),</span>
+        <span class="n">freq</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">)[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+        <span class="n">rank</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">)[</span><span class="s2">&quot;freq&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;first&quot;</span><span class="p">),</span>
+        <span class="n">exclude</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;exclude&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="s2">&quot;yes&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s2">&quot;no&quot;</span><span class="p">}),</span>
     <span class="p">)</span>
 <span class="p">)</span>
 
 <span class="n">select_exclude</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span>
-    <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"exclude"</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">"legend"</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="p">[{</span><span class="s2">"exclude"</span><span class="p">:</span> <span class="s2">"yes"</span><span class="p">},</span> <span class="p">{</span><span class="s2">"exclude"</span><span class="p">:</span> <span class="s2">"no"</span><span class="p">}],</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;exclude&quot;</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">&quot;legend&quot;</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;exclude&quot;</span><span class="p">:</span> <span class="s2">&quot;yes&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;exclude&quot;</span><span class="p">:</span> <span class="s2">&quot;no&quot;</span><span class="p">}],</span>
 <span class="p">)</span>
 
 <span class="n">select_site</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span>
-    <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"nt_site"</span><span class="p">],</span> <span class="n">on</span><span class="o">=</span><span class="s2">"mouseover"</span><span class="p">,</span> <span class="n">empty</span><span class="o">=</span><span class="s2">"none"</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;nt_site&quot;</span><span class="p">],</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;mouseover&quot;</span><span class="p">,</span> <span class="n">empty</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">mutation_freqs_chart</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">mutation_freqs</span><span class="p">)</span>
     <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s2">"rank"</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s2">"freq"</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;rank&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;freq&quot;</span><span class="p">,</span>
         <span class="n">strokeWidth</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">select_site</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
-        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">"exclude"</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">"yes"</span><span class="p">,</span> <span class="s2">"no"</span><span class="p">])),</span>
-        <span class="n">shape</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Shape</span><span class="p">(</span><span class="s2">"synonymous"</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;exclude&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;yes&quot;</span><span class="p">,</span> <span class="s2">&quot;no&quot;</span><span class="p">])),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Shape</span><span class="p">(</span><span class="s2">&quot;synonymous&quot;</span><span class="p">),</span>
         <span class="n">size</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">select_site</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">25</span><span class="p">)),</span>
-        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">"nt_site"</span><span class="p">,</span> <span class="s2">"nt_mutation"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">,</span> <span class="s2">"freq"</span><span class="p">],</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;nt_site&quot;</span><span class="p">,</span> <span class="s2">&quot;nt_mutation&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="s2">&quot;freq&quot;</span><span class="p">],</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
     <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">select_exclude</span><span class="p">,</span> <span class="n">select_site</span><span class="p">)</span>
     <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">select_exclude</span><span class="p">)</span>
 <span class="p">)</span>
@@ -14827,13 +14827,13 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-48f329590cdf408eba57aea8ae4b4cc6"></div>
+<div id="altair-viz-8b434cb8d9c442b5ae3cfdca1e0d71ba"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-48f329590cdf408eba57aea8ae4b4cc6") {
-      outputDiv = document.getElementById("altair-viz-48f329590cdf408eba57aea8ae4b4cc6");
+    if (outputDiv.id !== "altair-viz-8b434cb8d9c442b5ae3cfdca1e0d71ba") {
+      outputDiv = document.getElementById("altair-viz-8b434cb8d9c442b5ae3cfdca1e0d71ba");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -14911,11 +14911,11 @@ So when this notebook is run via <code>papermill</code>, those values will be re
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mut_type_counts</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">mutation_counts</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"synonymous"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"four_fold_degenerate"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"not exclude"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"subset"</span><span class="p">,</span> <span class="s2">"mut_type"</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">"count"</span><span class="p">:</span> <span class="s2">"sum"</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;synonymous&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;four_fold_degenerate&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;not exclude&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;subset&quot;</span><span class="p">,</span> <span class="s2">&quot;mut_type&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -14948,17 +14948,17 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 
 <span class="n">mut_type_counts_exclude_top</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">mutation_counts</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"synonymous"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"four_fold_degenerate"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"not exclude"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"subset == 'all'"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;synonymous&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;four_fold_degenerate&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;not exclude&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;subset == &#39;all&#39;&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-        <span class="n">clade_rank</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">)[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"min"</span><span class="p">),</span>
-        <span class="n">highest_rank</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"nt_mutation"</span><span class="p">)[</span><span class="s2">"clade_rank"</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">"min"</span><span class="p">),</span>
+        <span class="n">clade_rank</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">)[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;min&quot;</span><span class="p">),</span>
+        <span class="n">highest_rank</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;nt_mutation&quot;</span><span class="p">)[</span><span class="s2">&quot;clade_rank&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">),</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"highest_rank &gt; @exclude_top_n"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"mut_type"</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">"count"</span><span class="p">:</span> <span class="s2">"sum"</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;highest_rank &gt; @exclude_top_n&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;mut_type&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -14990,17 +14990,17 @@ Also draw a line at our minimum cutoff: we only keep subsets above this cutoff:<
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clade_counts</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">mut_type_counts</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"subset"</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">"count"</span><span class="p">:</span> <span class="s2">"sum"</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;subset&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
 <span class="p">)</span>
 
 <span class="n">clade_counts_chart</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">clade_counts</span><span class="p">)</span>
     <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s2">"clade"</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">"count"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"total mutations"</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">"log"</span><span class="p">)),</span>
-        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"subset"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">],</span>
-        <span class="n">color</span><span class="o">=</span><span class="s2">"subset"</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;total mutations&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">)),</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;subset&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">],</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;subset&quot;</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
     <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Step</span><span class="p">(</span><span class="mi">18</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="mi">175</span><span class="p">)</span>
@@ -15008,8 +15008,8 @@ Also draw a line at our minimum cutoff: we only keep subsets above this cutoff:<
 
 <span class="c1"># draw cutoff line</span>
 <span class="n">cutoff</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"y"</span><span class="p">:</span> <span class="p">[</span><span class="n">synonymous_spectra_min_counts</span><span class="p">]}))</span>
-    <span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s2">"y"</span><span class="p">)</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">synonymous_spectra_min_counts</span><span class="p">]}))</span>
+    <span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span><span class="n">strokeDash</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="p">)</span>
 
@@ -15035,13 +15035,13 @@ Also draw a line at our minimum cutoff: we only keep subsets above this cutoff:<
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-c92e5b5840ad4de0b711426bfcd7bbdd"></div>
+<div id="altair-viz-b14cda0b11ec483c993f59c49386a591"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-c92e5b5840ad4de0b711426bfcd7bbdd") {
-      outputDiv = document.getElementById("altair-viz-c92e5b5840ad4de0b711426bfcd7bbdd");
+    if (outputDiv.id !== "altair-viz-b14cda0b11ec483c993f59c49386a591") {
+      outputDiv = document.getElementById("altair-viz-b14cda0b11ec483c993f59c49386a591");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15119,19 +15119,19 @@ Also draw a line at our minimum cutoff: we only keep subsets above this cutoff:<
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_partitions</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="n">min_site</span> <span class="o">=</span> <span class="n">mutation_counts</span><span class="p">[</span><span class="s2">"nt_site"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-<span class="n">max_site</span> <span class="o">=</span> <span class="n">mutation_counts</span><span class="p">[</span><span class="s2">"nt_site"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">min_site</span> <span class="o">=</span> <span class="n">mutation_counts</span><span class="p">[</span><span class="s2">&quot;nt_site&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">max_site</span> <span class="o">=</span> <span class="n">mutation_counts</span><span class="p">[</span><span class="s2">&quot;nt_site&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="n">partition_bounds</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">min_site</span><span class="p">,</span> <span class="n">max_site</span><span class="p">,</span> <span class="n">n_partitions</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">assign_partition</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-    <span class="sd">"""Assign nucleotide mutation to its partition."""</span>
+    <span class="sd">&quot;&quot;&quot;Assign nucleotide mutation to its partition.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_partitions</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">partition_bounds</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">partition_bounds</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s2">"partition </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;partition </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="n">mutation_counts</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">mutation_counts</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"nt_site"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">assign_partition</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;nt_site&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">assign_partition</span><span class="p">))</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -15164,32 +15164,32 @@ Also draw a line at our minimum cutoff: we only keep subsets above this cutoff:<
     <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
         <span class="p">[</span>
             <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">clade_founder_nts_csv</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-                <span class="n">partition</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"site"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">assign_partition</span><span class="p">)</span>
+                <span class="n">partition</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;site&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">assign_partition</span><span class="p">)</span>
             <span class="p">),</span>
-            <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">clade_founder_nts_csv</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">"all"</span><span class="p">),</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">clade_founder_nts_csv</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">),</span>
         <span class="p">],</span>
     <span class="p">)</span>   
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"four_fold_degenerate"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"nt"</span><span class="p">,</span> <span class="s2">"partition"</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="s2">"site"</span><span class="p">,</span> <span class="s2">"nunique"</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;four_fold_degenerate&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;nt&quot;</span><span class="p">,</span> <span class="s2">&quot;partition&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="s2">&quot;site&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">))</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
         <span class="n">frac</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span>
-            <span class="n">x</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"partition"</span><span class="p">])[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">"sum"</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;partition&quot;</span><span class="p">])[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>
         <span class="p">),</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"count"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 
 <span class="n">partition_enrichment</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">composition_by_partition</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"partition != 'all'"</span><span class="p">)</span>
+    <span class="n">composition_by_partition</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;partition != &#39;all&#39;&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">merge</span><span class="p">(</span>
-        <span class="n">composition_by_partition</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"partition == 'all'"</span><span class="p">)[[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"nt"</span><span class="p">,</span> <span class="s2">"frac"</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
-            <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"frac"</span><span class="p">:</span> <span class="s2">"frac_all"</span><span class="p">}</span>
+        <span class="n">composition_by_partition</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;partition == &#39;all&#39;&quot;</span><span class="p">)[[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;nt&quot;</span><span class="p">,</span> <span class="s2">&quot;frac&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+            <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;frac&quot;</span><span class="p">:</span> <span class="s2">&quot;frac_all&quot;</span><span class="p">}</span>
         <span class="p">),</span>
-        <span class="n">validate</span><span class="o">=</span><span class="s2">"many_to_one"</span><span class="p">,</span>
+        <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;many_to_one&quot;</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">enrichment</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"frac"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">"frac_all"</span><span class="p">])</span>
-    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"nt"</span><span class="p">:</span> <span class="s2">"clade_founder_nt"</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">enrichment</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;frac&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;frac_all&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;nt&quot;</span><span class="p">:</span> <span class="s2">&quot;clade_founder_nt&quot;</span><span class="p">})</span>
 <span class="p">)</span>
 
 <span class="n">partition_enrichment</span>
@@ -15383,37 +15383,37 @@ You can also use the scroll bar to only show points with at least the indicated 
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">clr</span><span class="p">(</span><span class="n">frac_vec</span><span class="p">):</span>
-    <span class="sd">"""Formula here: https://www.rdocumentation.org/packages/compositions/versions/2.0-4/topics/clr"""</span>
-    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">frac_vec</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">"does not currently handle zeros in frac_vec"</span>
+    <span class="sd">&quot;&quot;&quot;Formula here: https://www.rdocumentation.org/packages/compositions/versions/2.0-4/topics/clr&quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">frac_vec</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;does not currently handle zeros in frac_vec&quot;</span>
     <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">frac_vec</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">frac_vec</span><span class="p">)</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">frac_vec</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
 
 <span class="k">def</span> <span class="nf">add_clade_synonym</span><span class="p">(</span><span class="n">clade</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">clade</span> <span class="ow">in</span> <span class="n">clade_synonyms</span><span class="p">:</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">clade</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">clade_synonyms</span><span class="p">[</span><span class="n">clade</span><span class="p">]</span><span class="si">}</span><span class="s2">)"</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">clade</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">clade_synonyms</span><span class="p">[</span><span class="n">clade</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">clade</span>
 
     
 <span class="k">for</span> <span class="n">title</span><span class="p">,</span> <span class="n">subsets</span><span class="p">,</span> <span class="n">partition</span><span class="p">,</span> <span class="n">exclude_top</span><span class="p">,</span> <span class="n">clr_transform</span><span class="p">,</span> <span class="n">normalize_partitions</span> <span class="ow">in</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s2">"all samples, whole genome"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"all"</span><span class="p">],</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"all samples, whole genome, +/- top mutations"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"all"</span><span class="p">],</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"by region, whole genome"</span><span class="p">,</span> <span class="n">subset_order</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"all samples, partitioned genome"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"all"</span><span class="p">],</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;all samples, whole genome&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">],</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;all samples, whole genome, +/- top mutations&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">],</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;by region, whole genome&quot;</span><span class="p">,</span> <span class="n">subset_order</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;all samples, partitioned genome&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">],</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
 <span class="p">]:</span>
     
     <span class="n">filtered_mutation_counts</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">mutation_counts</span>
-        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"synonymous"</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"four_fold_degenerate"</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"not exclude"</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"subset in @subsets"</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;synonymous&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;four_fold_degenerate&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;not exclude&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;subset in @subsets&quot;</span><span class="p">)</span>
     <span class="p">)</span>
     
     <span class="k">if</span> <span class="n">partition</span><span class="p">:</span>
         <span class="n">filtered_mutation_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
             <span class="p">[</span>
-                <span class="n">filtered_mutation_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">"all"</span><span class="p">),</span>
+                <span class="n">filtered_mutation_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">),</span>
                 <span class="n">filtered_mutation_counts</span><span class="p">,</span>
             <span class="p">]</span>
         <span class="p">)</span>
@@ -15422,57 +15422,57 @@ You can also use the scroll bar to only show points with at least the indicated 
                 <span class="n">filtered_mutation_counts</span>
                 <span class="o">.</span><span class="n">merge</span><span class="p">(</span>
                     <span class="n">partition_enrichment</span><span class="p">[</span>
-                        <span class="p">[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"partition"</span><span class="p">,</span> <span class="s2">"clade_founder_nt"</span><span class="p">,</span> <span class="s2">"enrichment"</span><span class="p">]</span>
+                        <span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;partition&quot;</span><span class="p">,</span> <span class="s2">&quot;clade_founder_nt&quot;</span><span class="p">,</span> <span class="s2">&quot;enrichment&quot;</span><span class="p">]</span>
                     <span class="p">],</span>
-                    <span class="n">how</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
-                    <span class="n">validate</span><span class="o">=</span><span class="s2">"many_to_one"</span><span class="p">,</span>
+                    <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+                    <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;many_to_one&quot;</span><span class="p">,</span>
                 <span class="p">)</span>
                 <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-                    <span class="n">enrichment</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"enrichment"</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
-                    <span class="n">count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">"enrichment"</span><span class="p">],</span>
+                    <span class="n">enrichment</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;enrichment&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+                    <span class="n">count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;enrichment&quot;</span><span class="p">],</span>
                 <span class="p">)</span>
             <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">filtered_mutation_counts</span> <span class="o">=</span> <span class="n">filtered_mutation_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">"all"</span><span class="p">)</span>
+        <span class="n">filtered_mutation_counts</span> <span class="o">=</span> <span class="n">filtered_mutation_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
         
     <span class="n">mut_type_counts</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">filtered_mutation_counts</span>
-        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"subset"</span><span class="p">,</span> <span class="s2">"partition"</span><span class="p">,</span> <span class="s2">"mut_type"</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">"count"</span><span class="p">:</span> <span class="s2">"sum"</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;subset&quot;</span><span class="p">,</span> <span class="s2">&quot;partition&quot;</span><span class="p">,</span> <span class="s2">&quot;mut_type&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span><span class="p">})</span>
     <span class="p">)</span>
     
     <span class="k">if</span> <span class="n">exclude_top</span><span class="p">:</span>
-        <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">mut_type_counts</span><span class="p">[</span><span class="s2">"partition"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"all"</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">mut_type_counts</span><span class="p">[</span><span class="s2">"subset"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"all"</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">mut_type_counts</span><span class="p">[</span><span class="s2">&quot;partition&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">mut_type_counts</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span>
         <span class="n">mut_type_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
             <span class="p">[</span>
-                <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">excluded</span><span class="o">=</span><span class="s2">"no"</span><span class="p">),</span>
+                <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">excluded</span><span class="o">=</span><span class="s2">&quot;no&quot;</span><span class="p">),</span>
                 <span class="n">mut_type_counts_exclude_top</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-                    <span class="n">partition</span><span class="o">=</span><span class="s2">"all"</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="s2">"all"</span><span class="p">,</span> <span class="n">excluded</span><span class="o">=</span><span class="s2">"yes"</span><span class="p">,</span>
+                    <span class="n">partition</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">excluded</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span><span class="p">,</span>
                 <span class="p">),</span>
             <span class="p">]</span>
         <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">mut_type_counts</span> <span class="o">=</span> <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">excluded</span><span class="o">=</span><span class="s2">"no"</span><span class="p">)</span>
+        <span class="n">mut_type_counts</span> <span class="o">=</span> <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">excluded</span><span class="o">=</span><span class="s2">&quot;no&quot;</span><span class="p">)</span>
    
     <span class="n">mut_type_freqs</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">mut_type_counts</span>
         <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
             <span class="n">total_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span>
-                <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"subset"</span><span class="p">,</span> <span class="s2">"partition"</span><span class="p">,</span> <span class="s2">"excluded"</span><span class="p">])</span>
-                <span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">"sum"</span><span class="p">)</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;subset&quot;</span><span class="p">,</span> <span class="s2">&quot;partition&quot;</span><span class="p">,</span> <span class="s2">&quot;excluded&quot;</span><span class="p">])</span>
+                <span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>
             <span class="p">),</span>
-            <span class="n">freq</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">"total_count"</span><span class="p">],</span>
+            <span class="n">freq</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;total_count&quot;</span><span class="p">],</span>
         <span class="p">)</span>
-        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"total_count &gt;= @synonymous_spectra_min_counts"</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;total_count &gt;= @synonymous_spectra_min_counts&quot;</span><span class="p">)</span>
     <span class="p">)</span>
    
     <span class="n">mut_type_freqs</span> <span class="o">=</span> <span class="p">(</span>
         <span class="n">mut_type_freqs</span>
         <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
-            <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"subset"</span><span class="p">,</span> <span class="s2">"partition"</span><span class="p">,</span> <span class="s2">"excluded"</span><span class="p">,</span> <span class="s2">"total_count"</span><span class="p">],</span>
-            <span class="n">values</span><span class="o">=</span><span class="s2">"freq"</span><span class="p">,</span>
-            <span class="n">columns</span><span class="o">=</span><span class="s2">"mut_type"</span><span class="p">,</span>
+            <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;subset&quot;</span><span class="p">,</span> <span class="s2">&quot;partition&quot;</span><span class="p">,</span> <span class="s2">&quot;excluded&quot;</span><span class="p">,</span> <span class="s2">&quot;total_count&quot;</span><span class="p">],</span>
+            <span class="n">values</span><span class="o">=</span><span class="s2">&quot;freq&quot;</span><span class="p">,</span>
+            <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;mut_type&quot;</span><span class="p">,</span>
             <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
         <span class="p">)</span>
     <span class="p">)</span>
@@ -15491,8 +15491,8 @@ You can also use the scroll bar to only show points with at least the indicated 
         <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
             <span class="n">principal_component_1</span><span class="o">=</span><span class="n">pca_coords</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
             <span class="n">principal_component_2</span><span class="o">=</span><span class="n">pca_coords</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
-            <span class="n">log10_total_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">"total_count"</span><span class="p">])</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
-            <span class="n">clade</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_clade_synonym</span><span class="p">),</span>
+            <span class="n">log10_total_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;total_count&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+            <span class="n">clade</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_clade_synonym</span><span class="p">),</span>
         <span class="p">)</span>
     <span class="p">)</span>
     
@@ -15500,18 +15500,18 @@ You can also use the scroll bar to only show points with at least the indicated 
     <span class="n">pca_var</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span>
     
     <span class="n">total_count_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span>
-        <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"log10_total_count"</span><span class="p">],</span>
-        <span class="n">init</span><span class="o">=</span><span class="p">{</span><span class="s2">"log10_total_count"</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">synonymous_spectra_min_counts</span><span class="p">)</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)},</span>
+        <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;log10_total_count&quot;</span><span class="p">],</span>
+        <span class="n">init</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;log10_total_count&quot;</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">synonymous_spectra_min_counts</span><span class="p">)</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)},</span>
         <span class="n">bind</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">binding_range</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="s2">"minimum log10 total counts"</span><span class="p">,</span>
-            <span class="nb">min</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">"log10_total_count"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span>
-            <span class="nb">max</span><span class="o">=</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">"log10_total_count"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;minimum log10 total counts&quot;</span><span class="p">,</span>
+            <span class="nb">min</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">&quot;log10_total_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span>
+            <span class="nb">max</span><span class="o">=</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">&quot;log10_total_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
         <span class="p">)</span>
     <span class="p">)</span>
     
-    <span class="n">clade_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">"legend"</span><span class="p">)</span>
+    <span class="n">clade_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">&quot;legend&quot;</span><span class="p">)</span>
 
-    <span class="n">tooltip</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"total_count"</span><span class="p">]</span>
+    <span class="n">tooltip</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;total_count&quot;</span><span class="p">]</span>
     
     <span class="n">plot_size</span> <span class="o">=</span> <span class="mi">300</span>  <span class="c1"># scaled by component variance explained</span>
     
@@ -15519,29 +15519,29 @@ You can also use the scroll bar to only show points with at least the indicated 
         <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">)</span>
         <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
             <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span>
-                <span class="s2">"principal_component_1"</span><span class="p">,</span>
-                <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">"PC1 (</span><span class="si">{</span><span class="n">pca_var</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">% variance)"</span><span class="p">,</span>
+                <span class="s2">&quot;principal_component_1&quot;</span><span class="p">,</span>
+                <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;PC1 (</span><span class="si">{</span><span class="n">pca_var</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">% variance)&quot;</span><span class="p">,</span>
                 <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">nice</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
                 <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
             <span class="p">),</span>
             <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span>
-                <span class="s2">"principal_component_2"</span><span class="p">,</span>
-                <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">"PC2 (</span><span class="si">{</span><span class="n">pca_var</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">% variance)"</span><span class="p">,</span>
+                <span class="s2">&quot;principal_component_2&quot;</span><span class="p">,</span>
+                <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;PC2 (</span><span class="si">{</span><span class="n">pca_var</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">% variance)&quot;</span><span class="p">,</span>
                 <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">nice</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
                 <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
             <span class="p">),</span>
             <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span>
-                <span class="s2">"clade"</span><span class="p">,</span>
+                <span class="s2">&quot;clade&quot;</span><span class="p">,</span>
                 <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span>
-                    <span class="n">scheme</span><span class="o">=</span><span class="s2">"viridis"</span><span class="p">,</span>
-                    <span class="n">domain</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+                    <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span>
+                    <span class="n">domain</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
                 <span class="p">),</span>
             <span class="p">),</span>
             <span class="n">strokeWidth</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">1.5</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
             <span class="n">opacity</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.9</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.45</span><span class="p">)),</span>
             <span class="n">size</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">65</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">45</span><span class="p">)),</span>
         <span class="p">)</span>
-        <span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
         <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">)</span>
         <span class="c1"># do not include the total count selection for now</span>
         <span class="c1">#.add_selection(total_count_selection)</span>
@@ -15557,56 +15557,56 @@ You can also use the scroll bar to only show points with at least the indicated 
     <span class="p">)</span>
     
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subsets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">subset_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"subset"</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">"legend"</span><span class="p">)</span>
+        <span class="n">subset_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">&quot;legend&quot;</span><span class="p">)</span>
         <span class="n">pca_chart</span> <span class="o">=</span> <span class="p">(</span>
             <span class="n">pca_chart</span>
-            <span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Shape</span><span class="p">(</span><span class="s2">"subset"</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="n">subset_order</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">subset_order</span><span class="p">)))</span>
+            <span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Shape</span><span class="p">(</span><span class="s2">&quot;subset&quot;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="n">subset_order</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">subset_order</span><span class="p">)))</span>
             <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">subset_selection</span><span class="p">)</span>
             <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">subset_selection</span><span class="p">)</span>
         <span class="p">)</span>
-        <span class="n">tooltip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"subset"</span><span class="p">)</span>
+        <span class="n">tooltip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;subset&quot;</span><span class="p">)</span>
         
     <span class="k">if</span> <span class="n">partition</span><span class="p">:</span>
-        <span class="n">partition_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"partition"</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">"legend"</span><span class="p">)</span>
+        <span class="n">partition_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;partition&quot;</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">&quot;legend&quot;</span><span class="p">)</span>
         <span class="n">pca_chart</span> <span class="o">=</span> <span class="p">(</span>
             <span class="n">pca_chart</span>
             <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
                 <span class="n">shape</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Shape</span><span class="p">(</span>
-                    <span class="s2">"partition"</span><span class="p">,</span>
-                    <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">"partition"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+                    <span class="s2">&quot;partition&quot;</span><span class="p">,</span>
+                    <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">&quot;partition&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
                 <span class="p">),</span>
             <span class="p">)</span>
             <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">partition_selection</span><span class="p">)</span>
             <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">partition_selection</span><span class="p">)</span>
         <span class="p">)</span>
-        <span class="n">tooltip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"partition"</span><span class="p">)</span>
+        <span class="n">tooltip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;partition&quot;</span><span class="p">)</span>
         
     <span class="k">if</span> <span class="n">exclude_top</span><span class="p">:</span>
-        <span class="n">exclude_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"excluded"</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">"legend"</span><span class="p">)</span>
-        <span class="n">shape_title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"exclude top </span><span class="si">{</span><span class="n">exclude_top_n</span><span class="si">}</span><span class="s2"> mutations/clade"</span>
+        <span class="n">exclude_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;excluded&quot;</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s2">&quot;legend&quot;</span><span class="p">)</span>
+        <span class="n">shape_title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;exclude top </span><span class="si">{</span><span class="n">exclude_top_n</span><span class="si">}</span><span class="s2"> mutations/clade&quot;</span>
         <span class="n">pca_chart</span> <span class="o">=</span> <span class="p">(</span>
             <span class="n">pca_chart</span>
             <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
                 <span class="n">shape</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Shape</span><span class="p">(</span>
-                    <span class="s2">"excluded"</span><span class="p">,</span>
+                    <span class="s2">&quot;excluded&quot;</span><span class="p">,</span>
                     <span class="n">title</span><span class="o">=</span><span class="n">shape_title</span><span class="p">,</span>
-                    <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">"excluded"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+                    <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">mut_type_freqs_pca_coords</span><span class="p">[</span><span class="s2">&quot;excluded&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
                 <span class="p">),</span>
             <span class="p">)</span>
             <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">exclude_selection</span><span class="p">)</span>
             <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">exclude_selection</span><span class="p">)</span>
         <span class="p">)</span>
-        <span class="n">tooltip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">"excluded"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">shape_title</span><span class="p">))</span>
+        <span class="n">tooltip</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;excluded&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">shape_title</span><span class="p">))</span>
                        
     <span class="n">pca_chart</span> <span class="o">=</span> <span class="n">pca_chart</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">tooltip</span><span class="o">=</span><span class="n">tooltip</span><span class="p">)</span>
     
     <span class="n">chart_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
         <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">rates_by_clade_csv</span><span class="p">),</span>
-        <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">"\W+"</span><span class="p">,</span> <span class="s2">"_"</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"_chart.html"</span><span class="p">,</span>
+        <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\W+&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_chart.html&quot;</span><span class="p">,</span>
     <span class="p">)</span>
     
     <span class="n">display</span><span class="p">(</span><span class="n">pca_chart</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saving to </span><span class="si">{</span><span class="n">chart_name</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saving to </span><span class="si">{</span><span class="n">chart_name</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">pca_chart</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">chart_name</span><span class="p">)</span>
 </pre></div>
 
@@ -15629,13 +15629,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-88724e8434474b1884d41e9c4e3ef53a"></div>
+<div id="altair-viz-2eae1555ab074f25981bd4884b872a1b"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-88724e8434474b1884d41e9c4e3ef53a") {
-      outputDiv = document.getElementById("altair-viz-88724e8434474b1884d41e9c4e3ef53a");
+    if (outputDiv.id !== "altair-viz-2eae1555ab074f25981bd4884b872a1b") {
+      outputDiv = document.getElementById("altair-viz-2eae1555ab074f25981bd4884b872a1b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15706,13 +15706,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-4714b796e65d441ca5a5e55131561ec9"></div>
+<div id="altair-viz-0864df16179b44fa9c94829939d96e4d"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-4714b796e65d441ca5a5e55131561ec9") {
-      outputDiv = document.getElementById("altair-viz-4714b796e65d441ca5a5e55131561ec9");
+    if (outputDiv.id !== "altair-viz-0864df16179b44fa9c94829939d96e4d") {
+      outputDiv = document.getElementById("altair-viz-0864df16179b44fa9c94829939d96e4d");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15783,13 +15783,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-27445269048b4bbbbf7478f7d49f562a"></div>
+<div id="altair-viz-0820d22d671445ebaa257d468253799a"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-27445269048b4bbbbf7478f7d49f562a") {
-      outputDiv = document.getElementById("altair-viz-27445269048b4bbbbf7478f7d49f562a");
+    if (outputDiv.id !== "altair-viz-0820d22d671445ebaa257d468253799a") {
+      outputDiv = document.getElementById("altair-viz-0820d22d671445ebaa257d468253799a");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15860,13 +15860,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-394fe428efc14e4fbc0b986c2d2dc324"></div>
+<div id="altair-viz-474a18845a6f4159a65f17d877cb5c63"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-394fe428efc14e4fbc0b986c2d2dc324") {
-      outputDiv = document.getElementById("altair-viz-394fe428efc14e4fbc0b986c2d2dc324");
+    if (outputDiv.id !== "altair-viz-474a18845a6f4159a65f17d877cb5c63") {
+      outputDiv = document.getElementById("altair-viz-474a18845a6f4159a65f17d877cb5c63");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15956,20 +15956,20 @@ We just do this on &quot;all&quot; sequences for a clade, not partitioning the g
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_mut_type_counts</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"subset == 'all'"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"subset"</span><span class="p">)</span>
+    <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;subset == &#39;all&#39;&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;subset&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-        <span class="n">total_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">)[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">"sum"</span><span class="p">),</span>
-        <span class="n">clade</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_clade_synonym</span><span class="p">),</span>
+        <span class="n">total_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">)[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+        <span class="n">clade</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_clade_synonym</span><span class="p">),</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"total_count &gt;= @synonymous_spectra_min_counts"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"total_count"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;total_count &gt;= @synonymous_spectra_min_counts&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;total_count&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 
 <span class="n">wide_all_mut_type_counts</span> <span class="o">=</span> <span class="n">all_mut_type_counts</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
-    <span class="n">index</span><span class="o">=</span><span class="s2">"mut_type"</span><span class="p">,</span>
-    <span class="n">columns</span><span class="o">=</span><span class="s2">"clade"</span><span class="p">,</span>
-    <span class="n">values</span><span class="o">=</span><span class="s2">"count"</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;mut_type&quot;</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span>
+    <span class="n">values</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span>
     <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
@@ -16010,10 +16010,10 @@ Also, Bonferroni correct the P-values (this is conservative, but is fine as thes
     <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">clade1</span><span class="p">,</span> <span class="n">clade2</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">chi2</span><span class="p">))</span>
     
 <span class="n">chi2_stats</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"clade_1"</span><span class="p">,</span> <span class="s2">"clade_2"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s2">"chi2"</span><span class="p">])</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clade_1&quot;</span><span class="p">,</span> <span class="s2">&quot;clade_2&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;chi2&quot;</span><span class="p">])</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-        <span class="n">p</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"p"</span><span class="p">]</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">lower</span><span class="o">=</span><span class="n">min_p</span><span class="p">),</span>
-        <span class="n">bonferroni_p</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">"p"</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">upper</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">p</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">lower</span><span class="o">=</span><span class="n">min_p</span><span class="p">),</span>
+        <span class="n">bonferroni_p</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">upper</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
     <span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
@@ -16047,28 +16047,28 @@ Note since counts are very large, many comparisons will be highly significant:</
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p_chart</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">chi2_stats</span><span class="p">)</span>
     <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"clade_1"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
-        <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">"clade_2"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;clade_1&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;clade_2&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
         <span class="n">fill</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Fill</span><span class="p">(</span>
-            <span class="s2">"bonferroni_p"</span><span class="p">,</span>
-            <span class="n">title</span><span class="o">=</span><span class="s2">"Bonferroni corrected P-value"</span><span class="p">,</span>
-            <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">"log"</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s2">"yelloworangered"</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-            <span class="n">legend</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Legend</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">"top"</span><span class="p">),</span>
+            <span class="s2">&quot;bonferroni_p&quot;</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Bonferroni corrected P-value&quot;</span><span class="p">,</span>
+            <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;yelloworangered&quot;</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+            <span class="n">legend</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Legend</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">),</span>
         <span class="p">),</span>
         <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span>
-            <span class="s2">"clade_1"</span><span class="p">,</span>
-            <span class="s2">"clade_2"</span><span class="p">,</span>
-            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">"p"</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">".2g"</span><span class="p">),</span>
-            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">"bonferroni_p"</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">".2g"</span><span class="p">),</span>
-            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">"chi2"</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">".2g"</span><span class="p">),</span>
+            <span class="s2">&quot;clade_1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;clade_2&quot;</span><span class="p">,</span>
+            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;.2g&quot;</span><span class="p">),</span>
+            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;bonferroni_p&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;.2g&quot;</span><span class="p">),</span>
+            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="s2">&quot;chi2&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;.2g&quot;</span><span class="p">),</span>
         <span class="p">],</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">mark_rect</span><span class="p">(</span><span class="n">stroke</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_rect</span><span class="p">(</span><span class="n">stroke</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Step</span><span class="p">(</span><span class="mi">14</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Step</span><span class="p">(</span><span class="mi">14</span><span class="p">))</span>
 <span class="p">)</span>
 
-<span class="n">chart_title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">rates_by_clade_csv</span><span class="p">),</span> <span class="s2">"p_value_chart.html"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saving to </span><span class="si">{</span><span class="n">chart_title</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">chart_title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">rates_by_clade_csv</span><span class="p">),</span> <span class="s2">&quot;p_value_chart.html&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saving to </span><span class="si">{</span><span class="n">chart_title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">p_chart</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">chart_title</span><span class="p">)</span>
 
 <span class="n">p_chart</span>
@@ -16103,13 +16103,13 @@ Note since counts are very large, many comparisons will be highly significant:</
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-5e6dd48ec84e40c180b10a03cc4da02c"></div>
+<div id="altair-viz-4dc00c7e0a784383a4a433206b12125c"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5e6dd48ec84e40c180b10a03cc4da02c") {
-      outputDiv = document.getElementById("altair-viz-5e6dd48ec84e40c180b10a03cc4da02c");
+    if (outputDiv.id !== "altair-viz-4dc00c7e0a784383a4a433206b12125c") {
+      outputDiv = document.getElementById("altair-viz-4dc00c7e0a784383a4a433206b12125c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -16190,12 +16190,12 @@ This is probably not currently a big problem, but could become a concern if a lo
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parent_composition</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">clade_founder_nts_csv</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"four_fold_degenerate"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"nt"</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">parent_nt_count</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="s2">"site"</span><span class="p">,</span> <span class="s2">"nunique"</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;four_fold_degenerate&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;nt&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">parent_nt_count</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="s2">&quot;site&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">))</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
         <span class="n">parent_nt_frac</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span>
-            <span class="n">x</span><span class="p">[</span><span class="s2">"parent_nt_count"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">)[</span><span class="s2">"parent_nt_count"</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">"sum"</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">[</span><span class="s2">&quot;parent_nt_count&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">)[</span><span class="s2">&quot;parent_nt_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>
         <span class="p">),</span>
     <span class="p">)</span>
 <span class="p">)</span>
@@ -16203,24 +16203,24 @@ This is probably not currently a big problem, but could become a concern if a lo
 <span class="n">mut_type_count_frac_rate</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
         <span class="p">[</span>
-            <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"subset == 'all'"</span><span class="p">)</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"partition == 'all'"</span><span class="p">)[</span>
-                <span class="p">[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"mut_type"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">]</span>
-            <span class="p">]</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">exclude_top_mutations</span><span class="o">=</span><span class="s2">"no"</span><span class="p">),</span>
-            <span class="n">mut_type_counts_exclude_top</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">exclude_top_mutations</span><span class="o">=</span><span class="s2">"yes"</span><span class="p">),</span>
+            <span class="n">mut_type_counts</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;subset == &#39;all&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;partition == &#39;all&#39;&quot;</span><span class="p">)[</span>
+                <span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;mut_type&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">]</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">exclude_top_mutations</span><span class="o">=</span><span class="s2">&quot;no&quot;</span><span class="p">),</span>
+            <span class="n">mut_type_counts_exclude_top</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">exclude_top_mutations</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span><span class="p">),</span>
         <span class="p">]</span>
     <span class="p">)</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-        <span class="n">total_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"exclude_top_mutations"</span><span class="p">])[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">"sum"</span><span class="p">),</span>
-        <span class="n">fraction</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">"total_count"</span><span class="p">],</span>
-        <span class="n">parent_nt</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"mut_type"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">total_count</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;exclude_top_mutations&quot;</span><span class="p">])[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+        <span class="n">fraction</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;total_count&quot;</span><span class="p">],</span>
+        <span class="n">parent_nt</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;mut_type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"total_count &gt;= @synonymous_spectra_min_counts"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;total_count &gt;= @synonymous_spectra_min_counts&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">merge</span><span class="p">(</span>
-        <span class="n">parent_composition</span><span class="p">[[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"nt"</span><span class="p">,</span> <span class="s2">"parent_nt_frac"</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"nt"</span><span class="p">:</span> <span class="s2">"parent_nt"</span><span class="p">}),</span>
-        <span class="n">how</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
-        <span class="n">validate</span><span class="o">=</span><span class="s2">"many_to_one"</span><span class="p">,</span>
+        <span class="n">parent_composition</span><span class="p">[[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;nt&quot;</span><span class="p">,</span> <span class="s2">&quot;parent_nt_frac&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;nt&quot;</span><span class="p">:</span> <span class="s2">&quot;parent_nt&quot;</span><span class="p">}),</span>
+        <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+        <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;many_to_one&quot;</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"fraction"</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">"parent_nt_frac"</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;fraction&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;parent_nt_frac&quot;</span><span class="p">])</span>
 <span class="p">)</span>
 </pre></div>
 
@@ -16251,32 +16251,32 @@ This is probably not currently a big problem, but could become a concern if a lo
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">melted_df</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">mut_type_count_frac_rate</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"exclude_top_mutations == 'no'"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">mut_type</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"mut_type"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"to"</span><span class="p">,</span> <span class="s2">" -&gt; "</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;exclude_top_mutations == &#39;no&#39;&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">mut_type</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;mut_type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot; -&gt; &quot;</span><span class="p">))</span>
     <span class="o">.</span><span class="n">melt</span><span class="p">(</span>
-        <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">,</span> <span class="s2">"mut_type"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">],</span>
-        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">"fraction"</span><span class="p">,</span> <span class="s2">"rate"</span><span class="p">],</span>
+        <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="s2">&quot;mut_type&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">],</span>
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fraction&quot;</span><span class="p">,</span> <span class="s2">&quot;rate&quot;</span><span class="p">],</span>
     <span class="p">)</span>
     <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
-        <span class="n">variable</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"variable"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
+        <span class="n">variable</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s2">"fraction"</span><span class="p">:</span> <span class="s2">"fraction of all mutations"</span><span class="p">,</span>
-                <span class="s2">"rate"</span><span class="p">:</span> <span class="s2">"relative rate of mutation"</span><span class="p">,</span>
+                <span class="s2">&quot;fraction&quot;</span><span class="p">:</span> <span class="s2">&quot;fraction of all mutations&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rate&quot;</span><span class="p">:</span> <span class="s2">&quot;relative rate of mutation&quot;</span><span class="p">,</span>
             <span class="p">}</span>
         <span class="p">),</span>
-        <span class="n">clade</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"clade"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_clade_synonym</span><span class="p">),</span>
+        <span class="n">clade</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">add_clade_synonym</span><span class="p">),</span>
     <span class="p">)</span>
 <span class="p">)</span>
 
-<span class="n">mut_type_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">"mut_type"</span><span class="p">])</span>
+<span class="n">mut_type_selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mut_type&quot;</span><span class="p">])</span>
 
 <span class="n">mut_type_selection_bar</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">melted_df</span><span class="p">[[</span><span class="s2">"mut_type"</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">())</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">melted_df</span><span class="p">[[</span><span class="s2">&quot;mut_type&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">())</span>
     <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"mut_type"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"click / shift-click to select mutation types"</span><span class="p">),</span>
-        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">mut_type_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"darkgray"</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"white"</span><span class="p">)),</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;mut_type&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;click / shift-click to select mutation types&quot;</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">mut_type_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;darkgray&quot;</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)),</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">mark_rect</span><span class="p">(</span><span class="n">stroke</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_rect</span><span class="p">(</span><span class="n">stroke</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">mut_type_selection</span><span class="p">)</span>
     <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Step</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
 <span class="p">)</span>
@@ -16284,26 +16284,26 @@ This is probably not currently a big problem, but could become a concern if a lo
 <span class="n">frac_rate_chart_base</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">melted_df</span><span class="p">)</span>
     <span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"mut_type"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"mutation type"</span><span class="p">),</span>
-        <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">"value"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
-        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">"clade"</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s2">"viridis"</span><span class="p">)),</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;mut_type&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;mutation type&quot;</span><span class="p">),</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;clade&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)),</span>
         <span class="n">strokeWidth</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
         <span class="n">opacity</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.9</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)),</span>
         <span class="n">size</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">40</span><span class="p">)),</span>
         <span class="n">column</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span>
-            <span class="s2">"variable"</span><span class="p">,</span>
+            <span class="s2">&quot;variable&quot;</span><span class="p">,</span>
             <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-            <span class="n">header</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Header</span><span class="p">(</span><span class="n">labelOrient</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span> <span class="n">labelFontSize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">labelFontStyle</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">),</span>
+            <span class="n">header</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Header</span><span class="p">(</span><span class="n">labelOrient</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">labelFontSize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">labelFontStyle</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">),</span>
         <span class="p">),</span>
         <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span>
-            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">".3g"</span><span class="p">)</span> <span class="k">if</span> <span class="n">melted_df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">float</span> <span class="k">else</span> <span class="n">c</span>
+            <span class="n">alt</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;.3g&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">melted_df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">float</span> <span class="k">else</span> <span class="n">c</span>
             <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">melted_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
         <span class="p">],</span>
     <span class="p">)</span>
-    <span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">clade_selection</span><span class="p">,</span> <span class="n">mut_type_selection</span><span class="p">)</span>
     <span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">mut_type_selection</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">resolve_scale</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s2">"independent"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">resolve_scale</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s2">&quot;independent&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Step</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 <span class="p">)</span>
 
@@ -16314,8 +16314,8 @@ This is probably not currently a big problem, but could become a concern if a lo
     <span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="n">chart_title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">rates_by_clade_csv</span><span class="p">),</span> <span class="s2">"frac_rate_chart.html"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saving to </span><span class="si">{</span><span class="n">chart_title</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">chart_title</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">rates_by_clade_csv</span><span class="p">),</span> <span class="s2">&quot;frac_rate_chart.html&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saving to </span><span class="si">{</span><span class="n">chart_title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">frac_rate_chart</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">chart_title</span><span class="p">)</span>
 
 <span class="n">frac_rate_chart</span>
@@ -16350,13 +16350,13 @@ This is probably not currently a big problem, but could become a concern if a lo
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-6b1b61221bf5449eac1e2336a644a0d9"></div>
+<div id="altair-viz-ea5605d353c5441c89f097171c6d8f88"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6b1b61221bf5449eac1e2336a644a0d9") {
-      outputDiv = document.getElementById("altair-viz-6b1b61221bf5449eac1e2336a644a0d9");
+    if (outputDiv.id !== "altair-viz-ea5605d353c5441c89f097171c6d8f88") {
+      outputDiv = document.getElementById("altair-viz-ea5605d353c5441c89f097171c6d8f88");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -16435,12 +16435,12 @@ Get the rates by clade <strong>without</strong> excluding the top mutations:</p>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rates_by_clade</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">mut_type_count_frac_rate</span>
-    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"exclude_top_mutations == 'no'"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">"exclude_top_mutations"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;exclude_top_mutations == &#39;no&#39;&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;exclude_top_mutations&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Writing rates to </span><span class="si">{</span><span class="n">rates_by_clade_csv</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">rates_by_clade</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">rates_by_clade_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">float_format</span><span class="o">=</span><span class="s2">"</span><span class="si">%.5g</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Writing rates to </span><span class="si">{</span><span class="n">rates_by_clade_csv</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">rates_by_clade</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">rates_by_clade_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">float_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.5g</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">rates_by_clade</span>
 </pre></div>
