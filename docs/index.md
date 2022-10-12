@@ -10,10 +10,10 @@ The plots are as following:
 
  - [Fractions and relative rates of different mutation types]({{ site.baseurl }}{% link rates-by-clade.md %})
 
- - [PCA of mutation spectra]({{ site.basurl }}{% link pca.md %})
+ - [PCA of mutation spectra]({{ site.baseurl }}{% link pca.md %})
 
- - [PCA of mutation spectra by geographic region]({{ site.basurl }}{% link pca_by_region.md %})
+ - [PCA of mutation spectra by geographic region]({{ site.baseurl }}{% link pca_by_region.md %})
 
- - [PCA of mutation spectra excluding top mutations]({{ site.basurl }}{% link pca_exclude_top.md %})
+ - [PCA of mutation spectra excluding top mutations]({{ site.baseurl }}{% link pca_exclude_top.md %})
  
- - [PCA of mutation spectra with partitioned genome]({{ site.basurl }}{% link pca_partitioned.md %})
+ - [PCA of mutation spectra with partitioned genome]({{ site.baseurl }}{% link pca_partitioned.md %})
