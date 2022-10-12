@@ -31,6 +31,8 @@ Note that the pipeline uses Python scripts in [./scripts/](scripts) and Jupyter 
 The created files are placed in [./results/](results).
 Only some of those results files are tracked in this repo (others are too large to track).
 
+Interactive versions of some figures are rendered via GitHub Pages at [https://jbloomlab.github.io/SARS2-mut-spectrum/](https://jbloomlab.github.io/SARS2-mut-spectrum/)
+
 ## Overview of analysis
 
 ### Counting mutations
