@@ -238,6 +238,7 @@ rule synonymous_mut_rates:
         nb="notebooks/synonymous_mut_rates.ipynb",
     output:
         rates_by_clade="results/synonymous_mut_rates/rates_by_clade.csv",
+        clade_rate_dist="results/synonymous_mut_rates/clade_rate_distances.csv",
         nb="results/synonymous_mut_rates/synonymous_mut_rates.ipynb",
         nb_html="results/synonymous_mut_rates/synonymous_mut_rates.html",
         **{
@@ -262,7 +263,8 @@ rule synonymous_mut_rates:
         papermill {input.nb} {output.nb} \
             -p mutation_counts_csv {input.mutation_counts_csv} \
             -p clade_founder_nts_csv {input.clade_founder_nts_csv} \
-            -p rates_by_clade_csv {output.rates_by_clade}
+            -p rates_by_clade_csv {output.rates_by_clade} \
+            -p clade_rate_dist_csv {output.clade_rate_dist}
         jupyter nbconvert {output.nb} --to html
         """
 
@@ -310,3 +312,16 @@ rule draw_tree_w_mut_enrichments:
             -p rates_by_clade_csv {input.rates_by_clade} \
             -p tree_image {output.tree_image}
         """
+
+
+rule mantel_test:
+    """Mantel test on mutation rates vs phylogenetic distance."""
+    input:
+        phylogenetic_dist=rules.clade_founder_tree.output.dist_matrix,
+        mut_rate_distance=rules.synonymous_mut_rates.output.clade_rate_dist,
+    output:
+        "results/mantel_test/test_plot.pdf",
+    conda:
+        "environment.yml"
+    shell:
+        "echo not_yet_implemented"

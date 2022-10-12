@@ -14611,6 +14611,7 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mutation_counts_csv</span> <span class="o">=</span> <span class="s2">&quot;../results/mutation_counts/aggregated.csv&quot;</span>
 <span class="n">clade_founder_nts_csv</span> <span class="o">=</span> <span class="s2">&quot;../results/clade_founder_nts/clade_founder_nts.csv&quot;</span>
 <span class="n">rates_by_clade_csv</span> <span class="o">=</span> <span class="s2">&quot;../results/synonymous_mut_rates/rates_by_clade.csv&quot;</span>
+<span class="n">clade_rate_dist_csv</span> <span class="o">=</span> <span class="s2">&quot;../results/synonymous_mut_rates/clade_rate_distances.csv&quot;</span>
 </pre></div>
 
      </div>
@@ -14630,6 +14631,7 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 <span class="n">mutation_counts_csv</span> <span class="o">=</span> <span class="s2">&quot;results/mutation_counts/aggregated.csv&quot;</span>
 <span class="n">clade_founder_nts_csv</span> <span class="o">=</span> <span class="s2">&quot;results/clade_founder_nts/clade_founder_nts.csv&quot;</span>
 <span class="n">rates_by_clade_csv</span> <span class="o">=</span> <span class="s2">&quot;results/synonymous_mut_rates/rates_by_clade.csv&quot;</span>
+<span class="n">clade_rate_dist_csv</span> <span class="o">=</span> <span class="s2">&quot;results/synonymous_mut_rates/clade_rate_distances.csv&quot;</span>
 </pre></div>
 
      </div>
@@ -14658,6 +14660,7 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
 
@@ -14827,13 +14830,13 @@ So when this notebook is run via <code>papermill</code>, those values will be re
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-8b434cb8d9c442b5ae3cfdca1e0d71ba"></div>
+<div id="altair-viz-c16a15c20163463d8e98b8631130a13c"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-8b434cb8d9c442b5ae3cfdca1e0d71ba") {
-      outputDiv = document.getElementById("altair-viz-8b434cb8d9c442b5ae3cfdca1e0d71ba");
+    if (outputDiv.id !== "altair-viz-c16a15c20163463d8e98b8631130a13c") {
+      outputDiv = document.getElementById("altair-viz-c16a15c20163463d8e98b8631130a13c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15035,13 +15038,13 @@ Also draw a line at our minimum cutoff: we only keep subsets above this cutoff:<
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-b14cda0b11ec483c993f59c49386a591"></div>
+<div id="altair-viz-e29cd7deda76488592096fc50feab13c"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b14cda0b11ec483c993f59c49386a591") {
-      outputDiv = document.getElementById("altair-viz-b14cda0b11ec483c993f59c49386a591");
+    if (outputDiv.id !== "altair-viz-e29cd7deda76488592096fc50feab13c") {
+      outputDiv = document.getElementById("altair-viz-e29cd7deda76488592096fc50feab13c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15629,13 +15632,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-2eae1555ab074f25981bd4884b872a1b"></div>
+<div id="altair-viz-c46c08ad6d164ed28af5436bbc943a18"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2eae1555ab074f25981bd4884b872a1b") {
-      outputDiv = document.getElementById("altair-viz-2eae1555ab074f25981bd4884b872a1b");
+    if (outputDiv.id !== "altair-viz-c46c08ad6d164ed28af5436bbc943a18") {
+      outputDiv = document.getElementById("altair-viz-c46c08ad6d164ed28af5436bbc943a18");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15706,13 +15709,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-0864df16179b44fa9c94829939d96e4d"></div>
+<div id="altair-viz-97ae949010764a939109417f88891ffd"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0864df16179b44fa9c94829939d96e4d") {
-      outputDiv = document.getElementById("altair-viz-0864df16179b44fa9c94829939d96e4d");
+    if (outputDiv.id !== "altair-viz-97ae949010764a939109417f88891ffd") {
+      outputDiv = document.getElementById("altair-viz-97ae949010764a939109417f88891ffd");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15783,13 +15786,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-0820d22d671445ebaa257d468253799a"></div>
+<div id="altair-viz-d7fe7b0eb4564ac69690db246fb746f8"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0820d22d671445ebaa257d468253799a") {
-      outputDiv = document.getElementById("altair-viz-0820d22d671445ebaa257d468253799a");
+    if (outputDiv.id !== "altair-viz-d7fe7b0eb4564ac69690db246fb746f8") {
+      outputDiv = document.getElementById("altair-viz-d7fe7b0eb4564ac69690db246fb746f8");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15860,13 +15863,13 @@ You can also use the scroll bar to only show points with at least the indicated 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
-<div id="altair-viz-474a18845a6f4159a65f17d877cb5c63"></div>
+<div id="altair-viz-1802eac6476f48ebb304791b3933b429"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-474a18845a6f4159a65f17d877cb5c63") {
-      outputDiv = document.getElementById("altair-viz-474a18845a6f4159a65f17d877cb5c63");
+    if (outputDiv.id !== "altair-viz-1802eac6476f48ebb304791b3933b429") {
+      outputDiv = document.getElementById("altair-viz-1802eac6476f48ebb304791b3933b429");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -16103,13 +16106,13 @@ Note since counts are very large, many comparisons will be highly significant:</
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-4dc00c7e0a784383a4a433206b12125c"></div>
+<div id="altair-viz-df5f77116fd3485cacb2b4afa3756531"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-4dc00c7e0a784383a4a433206b12125c") {
-      outputDiv = document.getElementById("altair-viz-4dc00c7e0a784383a4a433206b12125c");
+    if (outputDiv.id !== "altair-viz-df5f77116fd3485cacb2b4afa3756531") {
+      outputDiv = document.getElementById("altair-viz-df5f77116fd3485cacb2b4afa3756531");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -16350,13 +16353,13 @@ This is probably not currently a big problem, but could become a concern if a lo
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-ea5605d353c5441c89f097171c6d8f88"></div>
+<div id="altair-viz-27dfa1372a9a4515a3acee5f6c9efa09"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ea5605d353c5441c89f097171c6d8f88") {
-      outputDiv = document.getElementById("altair-viz-ea5605d353c5441c89f097171c6d8f88");
+    if (outputDiv.id !== "altair-viz-27dfa1372a9a4515a3acee5f6c9efa09") {
+      outputDiv = document.getElementById("altair-viz-27dfa1372a9a4515a3acee5f6c9efa09");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -16626,6 +16629,173 @@ Get the rates by clade <strong>without</strong> excluding the top mutations:</p>
   </tbody>
 </table>
 <p>168 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Compute distances between clade rates (just Euclidean norm of vectors):</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clade_rate_dist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">clade1</span><span class="p">,</span> <span class="n">clade2</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">rates_by_clade</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">rates1</span> <span class="o">=</span> <span class="n">rates_by_clade</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;clade == @clade1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;mut_type&quot;</span><span class="p">)[</span><span class="s2">&quot;rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">rates2</span> <span class="o">=</span> <span class="n">rates_by_clade</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;clade == @clade2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;mut_type&quot;</span><span class="p">)[</span><span class="s2">&quot;rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(((</span><span class="n">rates1</span> <span class="o">-</span> <span class="n">rates2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">clade_rate_dist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">clade1</span><span class="p">,</span> <span class="n">clade2</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>
+    
+<span class="n">clade_rate_dist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">clade_rate_dist</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;clade_1&quot;</span><span class="p">,</span> <span class="s2">&quot;clade_2&quot;</span><span class="p">,</span> <span class="s2">&quot;mut_rate_distance&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Writing clade rate distances to </span><span class="si">{</span><span class="n">clade_rate_dist_csv</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">clade_rate_dist</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">clade_rate_dist_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">float_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.5g</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+<span class="n">clade_rate_dist</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;mut_rate_distance&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Writing clade rate distances to results/synonymous_mut_rates/clade_rate_distances.csv
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>clade_1</th>
+      <th>clade_2</th>
+      <th>mut_rate_distance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>70</th>
+      <td>21I</td>
+      <td>21J</td>
+      <td>0.081899</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>20G</td>
+      <td>21C</td>
+      <td>0.087184</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20A</td>
+      <td>20C</td>
+      <td>0.106673</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>20A</td>
+      <td>20B</td>
+      <td>0.118520</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>21M</td>
+      <td>22C</td>
+      <td>0.121310</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>20C</td>
+      <td>21K</td>
+      <td>1.234195</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>20B</td>
+      <td>21M</td>
+      <td>1.257965</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>21I</td>
+      <td>21K</td>
+      <td>1.282061</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>20A</td>
+      <td>21K</td>
+      <td>1.324779</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>20B</td>
+      <td>21K</td>
+      <td>1.391763</td>
+    </tr>
+  </tbody>
+</table>
+<p>91 rows × 3 columns</p>
 </div>
 </div>
 

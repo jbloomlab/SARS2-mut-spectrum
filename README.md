@@ -80,7 +80,10 @@ The tree itself is in [results/clade_founder_tree/clade_founders.treefile](resul
 
 The notebook [draw_tree_w_mut_enrichments.ipynb](draw_tree_w_mut_enrichments.ipynb), which requires the `conda` environment in [environment_ete3.yml](environment_ete3.yml), draws the tree in [results/clade_founder_tree/tree_w_enrichments.png](results/clade_founder_tree/tree_w_enrichments.png), which has nodes plotted with change in relative mutation rate (absolute difference relative to reference clade, which is first listed).
 
-### Caveats of analysis
+### Mantel test
+A Mantel test for correlation between mutation rates and phylogenetic signal is run using the Euclidean distances between the relative mutation rates in [results/synonymous_mut_rates/clade_rate_distances.csv](results/synonymous_mut_rates/clade_rate_distances.csv) and the phylogenetic distances in [results/clade_founder_tree/clade_founders.mldist](results/clade_founder_tree/clade_founders.mldist).
+
+## Caveats of analysis
 None of these are expected to seriously affect the accuracy of the current analysis, but they could become problematic if the same analysis is applied to substantially more diverged clades:
 
  - For computing the rates of mutations from 4-fold degenerate synonymous sites, we do not exclude sites / mutations to exclude from the computation of the sequence composition that is used to normalize the counts of different mutations to rates. This would become a problem if you start to specify a very large number of sites to exclude in [config.yaml](config.yaml), or if the sequences become highly diverged from the reference (as we exclude reversions to reference and their complement).
