@@ -265,6 +265,9 @@ rule synonymous_mut_rates:
             -p clade_founder_nts_csv {input.clade_founder_nts_csv} \
             -p rates_by_clade_csv {output.rates_by_clade} \
             -p clade_rate_dist_csv {output.clade_rate_dist}
+
+        cp results/synonymous_mut_rates/*.html docs/_includes
+
         jupyter nbconvert {output.nb} --to html
         """
 

@@ -3,6 +3,11 @@
 _*
 *.out
 
+paper_figures
+
+!docs/_includes
+!docs/_layouts
+
 results/*
 
 !results/synonymous_mut_rates
