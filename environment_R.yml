@@ -1,0 +1,16 @@
+name: R
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+
+dependencies:
+  - jupyterlab
+  - r-essentials
+  - r-base
+  - r-broom
+  - r-dplyr
+  - r-ggplot2
+  - r-scales
+  - r-tidyverse
+  - r-vegan
