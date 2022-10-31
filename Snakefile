@@ -329,3 +329,14 @@ rule mantel_test:
         "environment_R.yml"
     notebook:
         "notebooks/mantel_test.R.ipynb"
+
+
+rule clade_found_aa_muts:
+    """Mutations distinguishing clade founder sequences."""
+    input:
+        rules.clade_founder_nts.output.csv,
+    output:
+    conda:
+        "environment.yml"
+    shell:
+        "echo not_implemented"
