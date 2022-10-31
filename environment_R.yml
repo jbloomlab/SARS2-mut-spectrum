@@ -6,9 +6,11 @@ channels:
 
 dependencies:
   - jupyterlab
+  - jupyter_contrib_nbextensions
   - r-essentials
   - r-base
   - r-broom
+  - r-cowplot
   - r-dplyr
   - r-ggplot2
   - r-scales

@@ -14,6 +14,7 @@ rule all:
         "results/synonymous_mut_rates/synonymous_mut_rates.html",
         "results/clade_founder_tree/clade_founders.treefile",
         "results/clade_founder_tree/tree_w_enrichments.png",
+        "results/mantel_test/mantel_test_plot.pdf",
 
 
 rule get_mat_tree:
@@ -323,8 +324,8 @@ rule mantel_test:
         phylogenetic_dist=rules.clade_founder_tree.output.dist_matrix,
         mut_rate_distance=rules.synonymous_mut_rates.output.clade_rate_dist,
     output:
-        "results/mantel_test/test_plot.pdf",
+        "results/mantel_test/mantel_test_plot.pdf",
     conda:
-        "environment.yml"
-    shell:
-        "echo not_yet_implemented"
+        "environment_R.yml"
+    notebook:
+        "notebooks/mantel_test.R.ipynb"

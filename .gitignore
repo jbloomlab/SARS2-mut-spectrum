@@ -29,3 +29,7 @@ results/clade_founder_tree/*
 !results/clade_founder_tree/clade_founders.treefile
 !results/clade_founder_tree/clade_founders.mldist
 !results/clade_founder_tree/tree_w_enrichments.png
+
+!results/mantel_test
+results/mantel_test/*
+!results/mantel_test/mantel_test_plot.pdf
