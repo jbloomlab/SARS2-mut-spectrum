@@ -15,6 +15,7 @@ rule all:
         "results/clade_founder_tree/clade_founders.treefile",
         "results/clade_founder_tree/tree_w_enrichments.png",
         "results/mantel_test/mantel_test_plot.pdf",
+        "results/clade_founder_aa_muts/clade_founder_aa_muts.csv",
 
 
 rule get_mat_tree:
@@ -331,14 +332,17 @@ rule mantel_test:
         "notebooks/mantel_test.R.ipynb"
 
 
-rule clade_found_aa_muts:
+rule clade_founder_aa_muts:
     """Mutations distinguishing clade founder sequences."""
     input:
         rules.clade_founder_nts.output.csv,
+        rates_by_clade=rules.synonymous_mut_rates.output.rates_by_clade,
     output:
+        "results/clade_founder_aa_muts/clade_founder_aa_muts.csv"
     params:
         config["orf1ab_to_nsps"],
+        config["clade_synonyms"],
     conda:
         "environment.yml"
-    shell:
-        "echo not_implemented"
+    notebook:
+        "notebooks/clade_founder_aa_muts.py.ipynb"

@@ -33,3 +33,7 @@ results/clade_founder_tree/*
 !results/mantel_test
 results/mantel_test/*
 !results/mantel_test/mantel_test_plot.pdf
+
+!results/clade_founder_aa_muts
+!results/clade_founder_aa_muts/*
+!results/clade_founder_aa_muts/clade_founder_aa_muts.csv
