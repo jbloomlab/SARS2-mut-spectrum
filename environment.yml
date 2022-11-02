@@ -12,9 +12,10 @@ dependencies:
   - iqtree=2.2
   - jupyter_contrib_nbextensions
   - jupyterlab
+  - matplotlib
   - pandas=1.4
   - papermill=2.3.4
   - python=3.9
   - scikit-learn=1.1.1
-  - snakemake=7.14
+  - snakemake=7.18
   - usher=0.5.6
