@@ -336,6 +336,8 @@ rule clade_found_aa_muts:
     input:
         rules.clade_founder_nts.output.csv,
     output:
+    params:
+        config["orf1ab_to_nsps"],
     conda:
         "environment.yml"
     shell:
