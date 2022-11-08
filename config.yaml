@@ -1,6 +1,6 @@
 # matutils pre-built mutation-annotated tree from
 # http://hgdownload.soe.ucsc.edu/goldenPath/wuhCor1/UShER_SARS-CoV-2/
-mat_tree: http://hgdownload.soe.ucsc.edu/goldenPath/wuhCor1/UShER_SARS-CoV-2/2022/09/20/public-2022-09-20.all.masked.nextclade.pangolin.pb.gz
+mat_tree: http://hgdownload.soe.ucsc.edu/goldenPath/wuhCor1/UShER_SARS-CoV-2/2022/11/07/public-2022-11-07.all.masked.nextclade.pangolin.pb.gz
 
 # Reference GTF and FASTA, and location of spike coding sequence
 ref_fasta: http://hgdownload.soe.ucsc.edu/goldenPath/wuhCor1/bigZips/wuhCor1.fa.gz
@@ -71,7 +71,7 @@ clade_synonyms:
   21I: Delta
   21J: Delta
   21K: Omicron BA.1
-  21M: Omicron
+  21L: Omicron BA.2
   22A: Omicron BA.4
   22B: Omicron BA.5
   22C: Omicron BA.2.12.1

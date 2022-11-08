@@ -13,3 +13,4 @@ dependencies:
   - pandas=1.4
   - python=3.9
   - pyyaml
+  - snakemake
