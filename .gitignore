@@ -3,8 +3,6 @@
 _*
 *.out
 
-paper_figures
-
 !docs/_includes
 !docs/_layouts
 
