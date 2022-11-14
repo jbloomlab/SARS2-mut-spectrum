@@ -39,10 +39,8 @@ def equilibrium_probabilities(M):
     p = evecs[:,ii]
     return p/p.sum()
 
-def get_ffsyn(reference_seq):
+def get_ffsyn(ref):
     from Bio import SeqIO
-    ## load reference
-    ref = SeqIO.read(reference_seq, 'genbank')
     features  = [{'pos':i, 'nuc':n} for i,n in enumerate(ref.seq)]
     ## make a map of codon positions, ignore orf9b (overlaps N)
     for feat in ref.features:
@@ -58,6 +56,14 @@ def get_ffsyn(reference_seq):
                     features[pos].update(tmp)
 
     return pd.DataFrame(features)
+
+def get_sequence_from_genbank(accession):
+    from Bio import SeqIO
+    from Bio import Entrez
+    Entrez.email = "richard.neher@unibas.ch"
+    handle = Entrez.efetch(db="nucleotide", id=accession, rettype="gb", retmode="text")
+    record = SeqIO.read(handle, "genbank")
+    return record
 
 
 if __name__=="__main__":
@@ -76,14 +82,19 @@ if __name__=="__main__":
         equilibrium_probabilities_by_clade[clade] = equilibrium_probabilities(spectrum_to_matrix(tmp_spectrum))
 
 
-    ref_genome = get_ffsyn("../ncov/defaults/reference_seq.gb")
-    freqs = empirical_frequencies({i:r for i,r in ref_genome.loc[ref_genome.four_fold & (~ref_genome.four_fold.isna())].nuc.value_counts().iteritems()})
+    accessions = ["KY352407.1", "MN908947"]
+    empirical_frequencies_references = {}
+    for accession in accessions:
+        ref = get_sequence_from_genbank(accession)
+        ref_genome = get_ffsyn(ref)
+        empirical_frequencies_references[accession] = empirical_frequencies({i:r for i,r in ref_genome.loc[ref_genome.four_fold & (~ref_genome.four_fold.isna())].nuc.value_counts().iteritems()})
 
     plt.figure()
     for c, p in equilibrium_probabilities_by_clade.items():
         plt.plot(p,label=c)
+    for a, f in empirical_frequencies_references.items():
+        plt.plot(f, label=a)
 
-    plt.plot(freqs, label='Wuhan-Hu-1')
 
     plt.xticks(np.arange(len(alphabet)), alphabet)
 
