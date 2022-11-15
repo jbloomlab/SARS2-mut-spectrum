@@ -7,7 +7,7 @@ layout: pca_partitioned
 
 Principal component analysis on mutation spectrum, both with and without partitioning the genome.
 Each point represents a different clade.
-Note that although the points for the partitioned clades are slightly differently positioned, the shift is consistent across clades indicating that the differences between clades are **not** driven by just one genome partition.
+Note that although the points for the partitioned clades are differently positioned, the shift is consistent across clades indicating that the differences between clades are **not** driven by just one genome partition.
 The chart is interactive:
 
   - mouse over points for details
