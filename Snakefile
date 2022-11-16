@@ -16,6 +16,8 @@ rule all:
         "results/clade_founder_tree/tree_w_enrichments.png",
         "results/mantel_test/mantel_test_plot.pdf",
         "results/clade_founder_aa_muts/clade_founder_aa_muts.csv",
+        "results/clade_founder_nts/nucleotide_freqs.html",
+        "results/equilibrium_freqs/equilibrium_freqs.html",
 
 
 rule get_mat_tree:
@@ -346,3 +348,31 @@ rule clade_founder_aa_muts:
         "environment.yml"
     notebook:
         "notebooks/clade_founder_aa_muts.py.ipynb"
+
+
+rule clade_founder_4fold_nt_freqs:
+    """Nucleotide frequencies at 4-fold degenerate sites."""
+    input:
+        rules.clade_founder_nts.output.csv,
+    output:
+        "results/clade_founder_nts/nucleotide_freqs.html",
+    params:
+        config["clade_synonyms"],
+    conda:
+        "environment.yml"
+    notebook:
+        "notebooks/clade_founder_4fold_nt_freqs.ipynb"
+
+
+rule equilibrium_frequencies:
+    """Predicted equilibrium frequencies at 4-fold sites."""
+    input:
+        rates_by_clade=rules.synonymous_mut_rates.output.rates_by_clade,
+    output:
+        "results/equilibrium_freqs/equilibrium_freqs.html",
+    params:
+        config["clade_synonyms"],
+    conda:
+        "environment.yml"
+    notebook:
+        "notebooks/equilibrium_frequencies.ipynb"

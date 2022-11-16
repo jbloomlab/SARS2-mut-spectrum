@@ -35,3 +35,7 @@ results/mantel_test/*
 !results/clade_founder_aa_muts
 !results/clade_founder_aa_muts/*
 !results/clade_founder_aa_muts/clade_founder_aa_muts.csv
+
+!results/equilibrium_freqs
+results/equilibrium_frequs/*
+!results/equilibrium_freqs/equilibrium_freqs.html
