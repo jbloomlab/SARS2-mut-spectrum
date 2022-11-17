@@ -35,6 +35,7 @@ def equilibrium_probabilities(M):
     # find zero eigenvalue
     ii = np.argmin(np.abs(evals))
     assert np.abs(evals[ii])<1e15
+    print(evecs)
     # pull out corresponding eigenvector, return normalized to sum_i p_i = 1
     p = evecs[:,ii]
     return p/p.sum()
@@ -45,7 +46,7 @@ def get_ffsyn(ref):
     ## make a map of codon positions, ignore orf9b (overlaps N)
     for feat in ref.features:
         if feat.type=='CDS':
-            gene_name = feat.qualifiers['gene'][0]
+            gene_name = feat.qualifiers.get('gene', ['-'])[0]
             if gene_name!='ORF9b':
                 for gpos, pos in enumerate(feat.location):
                     tmp = {'pos_in_codon':(gpos%3)+1, 'gene':gene_name, 'four_fold':False}
@@ -82,7 +83,9 @@ if __name__=="__main__":
         equilibrium_probabilities_by_clade[clade] = equilibrium_probabilities(spectrum_to_matrix(tmp_spectrum))
 
 
-    accessions = ["KY352407.1", "MN908947"]
+    accessions = ["KY352407.1", "MN908947","FJ425184", "FJ938066", "HM211098",
+                  "NC_017083", "HM211101", "LC494161", "KJ713296", "MF083115", "MH002339",
+                  "MH687973", "OL674078", "MG197719", "OK017819", "MW064263"]
     empirical_frequencies_references = {}
     for accession in accessions:
         ref = get_sequence_from_genbank(accession)
@@ -93,7 +96,7 @@ if __name__=="__main__":
     for c, p in equilibrium_probabilities_by_clade.items():
         plt.plot(p,label=c)
     for a, f in empirical_frequencies_references.items():
-        plt.plot(f, label=a)
+        plt.plot(f, label=a, ls='--')
 
 
     plt.xticks(np.arange(len(alphabet)), alphabet)
