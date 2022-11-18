@@ -1,4 +1,4 @@
-import urllib, json
+import urllib, json, os
 from Bio import SeqIO
 from collections import defaultdict
 from equilibrium_frequencies import equilibrium_probabilities, empirical_frequencies, spectrum_to_matrix
@@ -61,7 +61,8 @@ if __name__ == "__main__":
                             equilibrium_probabilities(spectrum_to_matrix(res['mutation_spectrum'])))}
         results[lineage] = res
 
-    with open("results/flu_spectra.json", "w") as f:
+    os.makedirs("results/flu_spectra", exist_ok=True)
+    with open("results/flu_spectra/flu_spectra.json", "w") as f:
         json.dump(results, f)
 
 
