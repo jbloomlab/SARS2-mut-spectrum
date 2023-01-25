@@ -37,6 +37,7 @@ if __name__ == "__main__":
         "rsv-a":{"url":"/rsv/a/{segment}", "segments":["genome"], 'ref':"https://raw.githubusercontent.com/nextstrain/rsv/master/config/areference.gbk"},
         "rsv-b":{"url":"/rsv/b/{segment}", "segments":["genome"], 'ref':"https://raw.githubusercontent.com/nextstrain/rsv/master/config/breference.gbk"},
         "evD68":{"url":"enterovirus/d68/{segment}", "segments":["genome"], "ref":"https://raw.githubusercontent.com/nextstrain/enterovirus_d68/master/genome/config/ev_d68_reference_genome.gb"},
+        "evA71":{"url":"groups/neherlab/ev/a71/whole-genome", "segments":[""], "ref":"https://raw.githubusercontent.com/neherlab/enterovirus_a71/master/ev_a71/whole_genome/config/reference_sequence.gb"},
         "denv1":{"url":"dengue/denv1{segment}", "segments":[""], "ref":"https://raw.githubusercontent.com/nextstrain/dengue/main/config/reference_dengue_denv1.gb"},
         "denv2":{"url":"dengue/denv2{segment}", "segments":[""], "ref":"https://raw.githubusercontent.com/nextstrain/dengue/main/config/reference_dengue_denv2.gb"},
         "denv3":{"url":"dengue/denv3{segment}", "segments":[""], "ref":"https://raw.githubusercontent.com/nextstrain/dengue/main/config/reference_dengue_denv3.gb"},
@@ -54,6 +55,7 @@ if __name__ == "__main__":
         for segment in build["segments"]:
             T = get_nextstrain_tree(build["url"].format(segment=segment))
             ref = get_reference(build["ref"].format(segment=segment))
+            print(bname, segment)
 
             for feature in ref.features:
                 if feature.type == "CDS":
@@ -76,8 +78,7 @@ if __name__ == "__main__":
                             equilibrium_probabilities(spectrum_to_matrix(res['mutation_spectrum'])))}
         results[bname] = res
 
-    os.makedirs("results/flu_spectra", exist_ok=True)
-    with open("results/flu_spectra/flu_spectra.json", "w") as f:
+    with open("results/other_virus_spectra.json", "w") as f:
         json.dump(results, f)
 
 

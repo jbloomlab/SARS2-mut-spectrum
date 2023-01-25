@@ -3,13 +3,13 @@ import json
 
 
 if __name__=="__main__":
-    with open("results/flu_spectra/flu_spectra.json") as f:
+    with open("results/other_virus_spectra.json") as f:
         results = json.load(f)
 
     import matplotlib.pyplot as plt
 
     ms = 50
-    fig = plt.figure(figsize=(6, 3.25))
+    fig = plt.figure(figsize=(6, 6.25))
     colors = ["tab:blue", "tab:orange", "tab:red", "tab:cyan"]
     xmax = 0.8  # harmonize with other plot
     for li, lineage in enumerate(results):
@@ -38,4 +38,4 @@ if __name__=="__main__":
     plt.ylim([-0.5, 3.5])
     plt.tick_params(axis='y', labelsize=12)
     plt.xlabel("nucleotide frequency", fontsize=12, fontweight="bold")
-    plt.savefig("results/flu_spectra/flu_spectra.pdf", bbox_inches='tight')
+    plt.savefig("results/other_virus_spectra.pdf", bbox_inches='tight')
