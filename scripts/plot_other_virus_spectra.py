@@ -14,18 +14,19 @@ if __name__=="__main__":
         res = results[lineage]
         for ki, (k, v) in enumerate(res['empirical_frequencies'].items()):
             plt.scatter(v, li-0.2, color=f'C{ki}', marker='o', label=k if li==0 else None, s=ms)
-        plt.text(0.03, li-0.2, 'empirical', ha='left', va='center', fontsize=12)
+        plt.text(0.01, li-0.2, 'empirical', ha='left', va='center', fontsize=12)
 
         for ki, (k, v) in enumerate(res['equilibrium_frequencies'].items()):
             plt.scatter(v, li+0.2, color=f'C{ki}', marker='+', label=k if li==0 else None, s=ms)
-        plt.text(0.03, li+0.2, 'predicted', ha='left', va='center', fontsize=12)
+        plt.text(0.01, li+0.2, 'predicted', ha='left', va='center', fontsize=12)
 
         for ki, (k, v) in enumerate(res['empirical_frequencies'].items()):
             plt.plot([v, res['equilibrium_frequencies'][k]], [li-0.2, li+0.2], color=f'C{ki}')
 
-        plt.fill_between([0,0.5], li-0.5, li+0.5, color='grey', alpha=0.1 + 0.2*(li%2), edgecolor='none')
+        plt.fill_between([0,0.8], li-0.5, li+0.5, color='grey', alpha=0.1 + 0.2*(li%2), edgecolor='none')
 
     plt.yticks(range(len(results)), list(results.keys()))
+    plt.xlim(0,0.8)
     plt.tick_params(axis='y', labelsize=12)
     plt.xlabel("Frequency")
     plt.savefig("results/other_virus_spectra.pdf", bbox_inches='tight')
