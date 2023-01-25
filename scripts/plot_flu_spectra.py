@@ -3,13 +3,13 @@ import json
 
 
 if __name__=="__main__":
-    with open("results/flu_spectra.json") as f:
+    with open("results/other_virus_spectra.json") as f:
         results = json.load(f)
 
     import matplotlib.pyplot as plt
 
     ms = 50
-    fig = plt.figure()
+    fig = plt.figure(figsize=(15,8))
     for li, lineage in enumerate(results):
         res = results[lineage]
         for ki, (k, v) in enumerate(res['empirical_frequencies'].items()):
@@ -28,4 +28,4 @@ if __name__=="__main__":
     plt.yticks(range(len(results)), list(results.keys()))
     plt.tick_params(axis='y', labelsize=12)
     plt.xlabel("Frequency")
-    plt.savefig("results/flu_spectra.pdf", bbox_inches='tight')
+    plt.savefig("results/other_virus_spectra.pdf", bbox_inches='tight')
