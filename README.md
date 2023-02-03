@@ -3,9 +3,7 @@
 ## Overview
 This repository analyzes the mutational spectrum of human SARS-CoV-2.
 
-This analysis was originally based off starting to replicate analyses [Neher (2022)](https://www.biorxiv.org/content/10.1101/2022.08.22.504731v1.full), but then checking the assumption that underlying synonymous mutation spectra were conserved across clades.
-
-Study by Jesse Bloom, Annabel Beichman, Richard Neher, Kelley Harris.
+The analysis accompanies the paper ["Evolution of the SARS-CoV-2 mutational spectrum" by Bloom, Beichman, Neher, & Harris](https://www.biorxiv.org/content/10.1101/2022.11.19.517207v1).
 
 ## Structure of repository and running the analysis
 The analysis is entirely reproducible.
