@@ -3,7 +3,7 @@ import json
 
 
 if __name__=="__main__":
-    with open("results/other_virus_spectra.json") as f:
+    with open("results/other_virus_spectra/other_virus_spectra.json") as f:
         results = json.load(f)
 
     import matplotlib.pyplot as plt
@@ -38,4 +38,4 @@ if __name__=="__main__":
     plt.ylim([-0.5, -0.5+len(results)])
     plt.tick_params(axis='y', labelsize=12)
     plt.xlabel("nucleotide frequency", fontsize=12, fontweight="bold")
-    plt.savefig("results/other_virus_spectra.pdf", bbox_inches='tight')
+    plt.savefig("results/other_virus_spectra/other_virus_spectra.pdf", bbox_inches='tight')

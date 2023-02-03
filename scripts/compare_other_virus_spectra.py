@@ -78,7 +78,7 @@ if __name__ == "__main__":
                             equilibrium_probabilities(spectrum_to_matrix(res['mutation_spectrum'])))}
         results[bname] = res
 
-    with open("results/other_virus_spectra.json", "w") as f:
+    with open("results/other_virus_spectra/other_virus_spectra.json", "w") as f:
         json.dump(results, f)
 
 
