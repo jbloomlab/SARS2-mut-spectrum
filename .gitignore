@@ -39,3 +39,8 @@ results/mantel_test/*
 !results/equilibrium_freqs
 results/equilibrium_frequs/*
 !results/equilibrium_freqs/equilibrium_freqs.html
+
+!results/other_virus_spectra
+results/other_virus_spectra/*
+!results/other_virus_spectra/*.pdf
+!results/other_virus_spectra/*.json

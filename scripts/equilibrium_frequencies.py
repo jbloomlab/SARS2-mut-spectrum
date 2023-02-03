@@ -34,8 +34,7 @@ def equilibrium_probabilities(M):
     evals, evecs = np.linalg.eig(M)
     # find zero eigenvalue
     ii = np.argmin(np.abs(evals))
-    assert np.abs(evals[ii])<1e15
-    print(evecs)
+    assert np.abs(evals[ii])<1e-10
     # pull out corresponding eigenvector, return normalized to sum_i p_i = 1
     p = evecs[:,ii]
     return p/p.sum()

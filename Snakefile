@@ -18,7 +18,7 @@ rule all:
         "results/clade_founder_aa_muts/clade_founder_aa_muts.csv",
         "results/clade_founder_nts/nucleotide_freqs.html",
         "results/equilibrium_freqs/equilibrium_freqs.html",
-        "results/flu_spectra/flu_spectra.pdf",
+        "results/other_virus_spectra/other_virus_spectra.pdf",
 
 
 rule get_mat_tree:
@@ -379,15 +379,15 @@ rule equilibrium_frequencies:
         "notebooks/equilibrium_frequencies.ipynb"
 
 
-rule flu_spectra:
+rule other_virus_spectra:
     """Plot the influenza spectra."""
     output:
-        "results/flu_spectra/flu_spectra.json",
-        "results/flu_spectra/flu_spectra.pdf",
+        "results/other_virus_spectra/other_virus_spectra.json",
+        "results/other_virus_spectra/other_virus_spectra.pdf",
     conda:
         "environment.yml"
     shell:
         """
-        python scripts/compare_flu_spectra.py
-	    python scripts/plot_flu_spectra.py
+        python scripts/compare_other_virus_spectra.py
+	    python scripts/plot_other_virus_spectra.py
         """
