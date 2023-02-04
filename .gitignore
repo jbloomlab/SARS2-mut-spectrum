@@ -44,3 +44,5 @@ results/equilibrium_frequs/*
 results/other_virus_spectra/*
 !results/other_virus_spectra/*.pdf
 !results/other_virus_spectra/*.json
+!results/other_virus_spectra/*.html
+

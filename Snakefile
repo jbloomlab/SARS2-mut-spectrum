@@ -19,6 +19,7 @@ rule all:
         "results/clade_founder_nts/nucleotide_freqs.html",
         "results/equilibrium_freqs/equilibrium_freqs.html",
         "results/other_virus_spectra/other_virus_spectra.pdf",
+        "results/other_virus_spectra/spectra_comparison.html",
 
 
 rule get_mat_tree:
@@ -371,6 +372,8 @@ rule equilibrium_frequencies:
         rates_by_clade=rules.synonymous_mut_rates.output.rates_by_clade,
     output:
         "results/equilibrium_freqs/equilibrium_freqs.html",
+        predicted_freqs="results/equilibrium_freqs/predicted_equilibrium_freqs.csv",
+        empirical_freqs="results/equilibrium_freqs/empirical_equilibrium_freqs.csv",
     params:
         config["clade_synonyms"],
     conda:
@@ -382,8 +385,8 @@ rule equilibrium_frequencies:
 rule other_virus_spectra:
     """Plot the influenza spectra."""
     output:
-        "results/other_virus_spectra/other_virus_spectra.json",
-        "results/other_virus_spectra/other_virus_spectra.pdf",
+        json="results/other_virus_spectra/other_virus_spectra.json",
+        pdf="results/other_virus_spectra/other_virus_spectra.pdf",
     conda:
         "environment.yml"
     shell:
@@ -391,3 +394,15 @@ rule other_virus_spectra:
         python scripts/compare_other_virus_spectra.py
 	    python scripts/plot_other_virus_spectra.py
         """
+
+
+rule compare_spectra:
+    """Compare spectra and equilibrium frequencies across all viruses."""
+    input:
+        other_viruses=rules.other_virus_spectra.output.json,
+        sars2_predicted=rules.equilibrium_frequencies.output.predicted_freqs,
+        sars2_empirical=rules.equilibrium_frequencies.output.empirical_freqs,
+    output:
+        plot="results/other_virus_spectra/spectra_comparison.html",
+    notebook:
+        "notebooks/compare_spectra.py.ipynb"

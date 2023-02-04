@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-4d61c285b1b70459c2a933f9c4b18729"}, "mark": {"type": "point", "filled": true, "opacity": 1, "size": 70}, "encoding": {"color": {"field": "is_sars", "legend": null, "scale": {"range": ["gray", "#CC79A7"]}, "type": "nominal"}, "shape": {"field": "is_sars", "legend": null, "type": "nominal"}, "x": {"field": "similarity", "scale": {"zero": false}, "title": "similarity predicted to empirical nucleotide frequencies", "type": "quantitative"}, "y": {"field": "virus", "sort": ["dengue virus 3", "dengue virus 2", "RSV-B", "RSV-A", "dengue virus 4", "dengue virus 1", "influenza B Victoria", "influenza B Yamagata", "enterovirus A71", "influenza A H1N1", "influenza A H3N2", "West Nile virus", "enterovirus D68", "SARS-CoV-2 clade 22B (Omicron BA.5)", "SARS-CoV-2 clade 20A (B.1)", "SARS-CoV-2 clade 21I (Delta)"], "title": null, "type": "nominal"}}, "height": {"step": 16}, "width": 270, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-4d61c285b1b70459c2a933f9c4b18729": [{"virus": "dengue virus 3", "similarity": 0.999838861598388, "is_sars": false}, {"virus": "dengue virus 2", "similarity": 0.9998236939021823, "is_sars": false}, {"virus": "RSV-B", "similarity": 0.9997431526771581, "is_sars": false}, {"virus": "RSV-A", "similarity": 0.9991816717544154, "is_sars": false}, {"virus": "dengue virus 4", "similarity": 0.9988173519985286, "is_sars": false}, {"virus": "dengue virus 1", "similarity": 0.998579216091378, "is_sars": false}, {"virus": "influenza B Victoria", "similarity": 0.9977913081688103, "is_sars": false}, {"virus": "influenza B Yamagata", "similarity": 0.9964161521556797, "is_sars": false}, {"virus": "enterovirus A71", "similarity": 0.9960773468280971, "is_sars": false}, {"virus": "influenza A H1N1", "similarity": 0.9947479969392518, "is_sars": false}, {"virus": "influenza A H3N2", "similarity": 0.9942871333701047, "is_sars": false}, {"virus": "West Nile virus", "similarity": 0.9876996645785189, "is_sars": false}, {"virus": "enterovirus D68", "similarity": 0.9836191217459562, "is_sars": false}, {"virus": "SARS-CoV-2 clade 22B (Omicron BA.5)", "similarity": 0.9771868581727106, "is_sars": true}, {"virus": "SARS-CoV-2 clade 20A (B.1)", "similarity": 0.9450305069740512, "is_sars": true}, {"virus": "SARS-CoV-2 clade 21I (Delta)", "similarity": 0.9386727120043256, "is_sars": true}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
