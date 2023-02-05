@@ -1,274 +1,456 @@
 rate_type,clade_1,clade_2,mut_rate_distance,is_Omicron
 rates,20A,20B,0.12277,not Omicron
 no_GtoT_rates,20A,20B,0.1356,not Omicron
+no_CtoT_rates,20A,20B,0.21073,not Omicron
+no_CtoT_orGtoT_rates,20A,20B,0.11688,not Omicron
 clr_rates,20A,20B,0.45761,not Omicron
 rates,20A,20C,0.1054,not Omicron
 no_GtoT_rates,20A,20C,0.07193,not Omicron
+no_CtoT_rates,20A,20C,0.17994,not Omicron
+no_CtoT_orGtoT_rates,20A,20C,0.12952,not Omicron
 clr_rates,20A,20C,0.98075,not Omicron
 rates,20A,20E,0.50519,not Omicron
 no_GtoT_rates,20A,20E,0.17589,not Omicron
+no_CtoT_rates,20A,20E,0.64974,not Omicron
+no_CtoT_orGtoT_rates,20A,20E,0.26581,not Omicron
 clr_rates,20A,20E,0.76788,not Omicron
 rates,20A,20G,0.38659,not Omicron
 no_GtoT_rates,20A,20G,0.20586,not Omicron
+no_CtoT_rates,20A,20G,0.35411,not Omicron
+no_CtoT_orGtoT_rates,20A,20G,0.18344,not Omicron
 clr_rates,20A,20G,1.1318,not Omicron
 rates,20A,20I,0.34475,not Omicron
 no_GtoT_rates,20A,20I,0.15055,not Omicron
+no_CtoT_rates,20A,20I,0.41498,not Omicron
+no_CtoT_orGtoT_rates,20A,20I,0.21997,not Omicron
 clr_rates,20A,20I,0.94853,not Omicron
 rates,20A,21C,0.40644,not Omicron
 no_GtoT_rates,20A,21C,0.14943,not Omicron
+no_CtoT_rates,20A,21C,0.4669,not Omicron
+no_CtoT_orGtoT_rates,20A,21C,0.15419,not Omicron
 clr_rates,20A,21C,0.86168,not Omicron
 rates,20A,21I,0.29713,not Omicron
 no_GtoT_rates,20A,21I,0.35396,not Omicron
+no_CtoT_rates,20A,21I,0.35431,not Omicron
+no_CtoT_orGtoT_rates,20A,21I,0.15467,not Omicron
 clr_rates,20A,21I,0.48555,not Omicron
 rates,20A,21J,0.32344,not Omicron
 no_GtoT_rates,20A,21J,0.37481,not Omicron
+no_CtoT_rates,20A,21J,0.46745,not Omicron
+no_CtoT_orGtoT_rates,20A,21J,0.17007,not Omicron
 clr_rates,20A,21J,0.59599,not Omicron
 rates,20A,21K,1.3242,mixed
 no_GtoT_rates,20A,21K,0.3415,mixed
+no_CtoT_rates,20A,21K,2.2619,mixed
+no_CtoT_orGtoT_rates,20A,21K,0.17399,mixed
 clr_rates,20A,21K,1.1288,mixed
 rates,20A,21L,1.189,mixed
 no_GtoT_rates,20A,21L,0.19092,mixed
+no_CtoT_rates,20A,21L,1.976,mixed
+no_CtoT_orGtoT_rates,20A,21L,0.17455,mixed
 clr_rates,20A,21L,0.97729,mixed
 rates,20A,22A,1.1074,mixed
 no_GtoT_rates,20A,22A,0.20805,mixed
+no_CtoT_rates,20A,22A,1.8117,mixed
+no_CtoT_orGtoT_rates,20A,22A,0.30169,mixed
 clr_rates,20A,22A,1.3442,mixed
 rates,20A,22B,1.0389,mixed
 no_GtoT_rates,20A,22B,0.30914,mixed
+no_CtoT_rates,20A,22B,1.7578,mixed
+no_CtoT_orGtoT_rates,20A,22B,0.35283,mixed
 clr_rates,20A,22B,1.2045,mixed
 rates,20A,22C,1.1014,mixed
 no_GtoT_rates,20A,22C,0.19969,mixed
+no_CtoT_rates,20A,22C,1.8332,mixed
+no_CtoT_orGtoT_rates,20A,22C,0.18981,mixed
 clr_rates,20A,22C,1.2351,mixed
 rates,20B,20C,0.19805,not Omicron
 no_GtoT_rates,20B,20C,0.17377,not Omicron
+no_CtoT_rates,20B,20C,0.3682,not Omicron
+no_CtoT_orGtoT_rates,20B,20C,0.17523,not Omicron
 clr_rates,20B,20C,0.79183,not Omicron
 rates,20B,20E,0.53664,not Omicron
 no_GtoT_rates,20B,20E,0.096108,not Omicron
+no_CtoT_rates,20B,20E,0.8238,not Omicron
+no_CtoT_orGtoT_rates,20B,20E,0.19375,not Omicron
 clr_rates,20B,20E,0.84391,not Omicron
 rates,20B,20G,0.40968,not Omicron
 no_GtoT_rates,20B,20G,0.13197,not Omicron
+no_CtoT_rates,20B,20G,0.54845,not Omicron
+no_CtoT_orGtoT_rates,20B,20G,0.23839,not Omicron
 clr_rates,20B,20G,0.91447,not Omicron
 rates,20B,20I,0.37736,not Omicron
 no_GtoT_rates,20B,20I,0.096544,not Omicron
+no_CtoT_rates,20B,20I,0.59095,not Omicron
+no_CtoT_orGtoT_rates,20B,20I,0.19016,not Omicron
 clr_rates,20B,20I,1.0131,not Omicron
 rates,20B,21C,0.43872,not Omicron
 no_GtoT_rates,20B,21C,0.071499,not Omicron
+no_CtoT_rates,20B,21C,0.65398,not Omicron
+no_CtoT_orGtoT_rates,20B,21C,0.14374,not Omicron
 clr_rates,20B,21C,0.6552,not Omicron
 rates,20B,21I,0.40133,not Omicron
 no_GtoT_rates,20B,21I,0.47498,not Omicron
+no_CtoT_rates,20B,21I,0.54267,not Omicron
+no_CtoT_orGtoT_rates,20B,21I,0.17173,not Omicron
 clr_rates,20B,21I,0.51824,not Omicron
 rates,20B,21J,0.42907,not Omicron
 no_GtoT_rates,20B,21J,0.49147,not Omicron
+no_CtoT_rates,20B,21J,0.65064,not Omicron
+no_CtoT_orGtoT_rates,20B,21J,0.13942,not Omicron
 clr_rates,20B,21J,0.76147,not Omicron
 rates,20B,21K,1.3961,mixed
 no_GtoT_rates,20B,21K,0.45639,mixed
+no_CtoT_rates,20B,21K,2.4524,mixed
+no_CtoT_orGtoT_rates,20B,21K,0.12384,mixed
 clr_rates,20B,21K,1.1318,mixed
 rates,20B,21L,1.2527,mixed
 no_GtoT_rates,20B,21L,0.29968,mixed
+no_CtoT_rates,20B,21L,2.1665,mixed
+no_CtoT_orGtoT_rates,20B,21L,0.13445,mixed
 clr_rates,20B,21L,1.0549,mixed
 rates,20B,22A,1.1734,mixed
 no_GtoT_rates,20B,22A,0.31642,mixed
+no_CtoT_rates,20B,22A,2.0084,mixed
+no_CtoT_orGtoT_rates,20B,22A,0.35827,mixed
 clr_rates,20B,22A,1.1337,mixed
 rates,20B,22B,1.116,mixed
 no_GtoT_rates,20B,22B,0.43039,mixed
+no_CtoT_rates,20B,22B,1.9572,mixed
+no_CtoT_orGtoT_rates,20B,22B,0.42796,mixed
 clr_rates,20B,22B,1.0255,mixed
 rates,20B,22C,1.1665,mixed
 no_GtoT_rates,20B,22C,0.30679,mixed
+no_CtoT_rates,20B,22C,2.0235,mixed
+no_CtoT_orGtoT_rates,20B,22C,0.15478,mixed
 clr_rates,20B,22C,1.0342,mixed
 rates,20C,20E,0.43646,not Omicron
 no_GtoT_rates,20C,20E,0.2129,not Omicron
+no_CtoT_rates,20C,20E,0.52315,not Omicron
+no_CtoT_orGtoT_rates,20C,20E,0.3147,not Omicron
 clr_rates,20C,20E,1.4638,not Omicron
 rates,20C,20G,0.3189,not Omicron
 no_GtoT_rates,20C,20G,0.21968,not Omicron
+no_CtoT_rates,20C,20G,0.19522,not Omicron
+no_CtoT_orGtoT_rates,20C,20G,0.11703,not Omicron
 clr_rates,20C,20G,0.39947,not Omicron
 rates,20C,20I,0.28682,not Omicron
 no_GtoT_rates,20C,20I,0.19406,not Omicron
+no_CtoT_rates,20C,20I,0.31392,not Omicron
+no_CtoT_orGtoT_rates,20C,20I,0.28634,not Omicron
 clr_rates,20C,20I,1.7152,not Omicron
 rates,20C,21C,0.33354,not Omicron
 no_GtoT_rates,20C,21C,0.17081,not Omicron
+no_CtoT_rates,20C,21C,0.31851,not Omicron
+no_CtoT_orGtoT_rates,20C,21C,0.14232,not Omicron
 clr_rates,20C,21C,0.6308,not Omicron
 rates,20C,21I,0.28225,not Omicron
 no_GtoT_rates,20C,21I,0.32393,not Omicron
+no_CtoT_rates,20C,21I,0.20476,not Omicron
+no_CtoT_orGtoT_rates,20C,21I,0.1224,not Omicron
 clr_rates,20C,21I,0.96091,not Omicron
 rates,20C,21J,0.29702,not Omicron
 no_GtoT_rates,20C,21J,0.35268,not Omicron
+no_CtoT_rates,20C,21J,0.33276,not Omicron
+no_CtoT_orGtoT_rates,20C,21J,0.19737,not Omicron
 clr_rates,20C,21J,1.3225,not Omicron
 rates,20C,21K,1.2357,mixed
 no_GtoT_rates,20C,21K,0.31691,mixed
+no_CtoT_rates,20C,21K,2.1106,mixed
+no_CtoT_orGtoT_rates,20C,21K,0.18654,mixed
 clr_rates,20C,21K,1.2488,mixed
 rates,20C,21L,1.1016,mixed
 no_GtoT_rates,20C,21L,0.17202,mixed
+no_CtoT_rates,20C,21L,1.8254,mixed
+no_CtoT_orGtoT_rates,20C,21L,0.19435,mixed
 clr_rates,20C,21L,1.4641,mixed
 rates,20C,22A,1.0157,mixed
 no_GtoT_rates,20C,22A,0.15696,mixed
+no_CtoT_rates,20C,22A,1.6527,mixed
+no_CtoT_orGtoT_rates,20C,22A,0.21665,mixed
 clr_rates,20C,22A,0.83932,mixed
 rates,20C,22B,0.94639,mixed
 no_GtoT_rates,20C,22B,0.26626,mixed
+no_CtoT_rates,20C,22B,1.5995,mixed
+no_CtoT_orGtoT_rates,20C,22B,0.28563,mixed
 clr_rates,20C,22B,0.71664,mixed
 rates,20C,22C,1.0116,mixed
 no_GtoT_rates,20C,22C,0.16229,mixed
+no_CtoT_rates,20C,22C,1.6784,mixed
+no_CtoT_orGtoT_rates,20C,22C,0.14019,mixed
 clr_rates,20C,22C,0.73504,mixed
 rates,20E,20G,0.21463,not Omicron
 no_GtoT_rates,20E,20G,0.19359,not Omicron
+no_CtoT_rates,20E,20G,0.40541,not Omicron
+no_CtoT_orGtoT_rates,20E,20G,0.36995,not Omicron
 clr_rates,20E,20G,1.4799,not Omicron
 rates,20E,20I,0.17277,not Omicron
 no_GtoT_rates,20E,20I,0.069071,not Omicron
+no_CtoT_rates,20E,20I,0.25902,not Omicron
+no_CtoT_orGtoT_rates,20E,20I,0.13624,not Omicron
 clr_rates,20E,20I,0.38032,not Omicron
 rates,20E,21C,0.14848,not Omicron
 no_GtoT_rates,20E,21C,0.13063,not Omicron
+no_CtoT_rates,20E,21C,0.26123,not Omicron
+no_CtoT_orGtoT_rates,20E,21C,0.26269,not Omicron
 clr_rates,20E,21C,1.056,not Omicron
 rates,20E,21I,0.62215,not Omicron
 no_GtoT_rates,20E,21I,0.47659,not Omicron
+no_CtoT_rates,20E,21I,0.33907,not Omicron
+no_CtoT_orGtoT_rates,20E,21I,0.2476,not Omicron
 clr_rates,20E,21I,0.7868,not Omicron
 rates,20E,21J,0.58245,not Omicron
 no_GtoT_rates,20E,21J,0.48705,not Omicron
+no_CtoT_rates,20E,21J,0.21353,not Omicron
+no_CtoT_orGtoT_rates,20E,21J,0.17318,not Omicron
 clr_rates,20E,21J,0.61868,not Omicron
 rates,20E,21K,0.90551,mixed
 no_GtoT_rates,20E,21K,0.45906,mixed
+no_CtoT_rates,20E,21K,1.6491,mixed
+no_CtoT_orGtoT_rates,20E,21K,0.21597,mixed
 clr_rates,20E,21K,1.0378,mixed
 rates,20E,21L,0.74486,mixed
 no_GtoT_rates,20E,21L,0.30097,mixed
+no_CtoT_rates,20E,21L,1.3615,mixed
+no_CtoT_orGtoT_rates,20E,21L,0.187,mixed
 clr_rates,20E,21L,0.71728,mixed
 rates,20E,22A,0.68508,mixed
 no_GtoT_rates,20E,22A,0.34902,mixed
+no_CtoT_rates,20E,22A,1.2384,mixed
+no_CtoT_orGtoT_rates,20E,22A,0.47475,mixed
 clr_rates,20E,22A,1.4693,mixed
 rates,20E,22B,0.6649,mixed
 no_GtoT_rates,20E,22B,0.4646,mixed
+no_CtoT_rates,20E,22B,1.206,mixed
+no_CtoT_orGtoT_rates,20E,22B,0.56306,mixed
 clr_rates,20E,22B,1.4583,mixed
 rates,20E,22C,0.66761,mixed
 no_GtoT_rates,20E,22C,0.31699,mixed
+no_CtoT_rates,20E,22C,1.2257,mixed
+no_CtoT_orGtoT_rates,20E,22C,0.25037,mixed
 clr_rates,20E,22C,1.4131,mixed
 rates,20G,20I,0.15612,not Omicron
 no_GtoT_rates,20G,20I,0.18026,not Omicron
+no_CtoT_rates,20G,20I,0.25394,not Omicron
+no_CtoT_orGtoT_rates,20G,20I,0.32823,not Omicron
 clr_rates,20G,20I,1.7577,not Omicron
 rates,20G,21C,0.084621,not Omicron
 no_GtoT_rates,20G,21C,0.088383,not Omicron
+no_CtoT_rates,20G,21C,0.16414,not Omicron
+no_CtoT_orGtoT_rates,20G,21C,0.14033,not Omicron
 clr_rates,20G,21C,0.48556,not Omicron
 rates,20G,21I,0.5646,not Omicron
 no_GtoT_rates,20G,21I,0.53917,not Omicron
+no_CtoT_rates,20G,21I,0.15183,not Omicron
+no_CtoT_orGtoT_rates,20G,21I,0.20001,not Omicron
 clr_rates,20G,21I,1.0933,not Omicron
 rates,20G,21J,0.54944,not Omicron
 no_GtoT_rates,20G,21J,0.56546,not Omicron
+no_CtoT_rates,20G,21J,0.23723,not Omicron
+no_CtoT_orGtoT_rates,20G,21J,0.2665,not Omicron
 clr_rates,20G,21J,1.437,not Omicron
 rates,20G,21K,1.0505,mixed
 no_GtoT_rates,20G,21K,0.52469,mixed
+no_CtoT_rates,20G,21K,1.9385,mixed
+no_CtoT_orGtoT_rates,20G,21K,0.21326,mixed
 clr_rates,20G,21K,1.2348,mixed
 rates,20G,21L,0.89319,mixed
 no_GtoT_rates,20G,21L,0.374,mixed
+no_CtoT_rates,20G,21L,1.6566,mixed
+no_CtoT_orGtoT_rates,20G,21L,0.24965,mixed
 clr_rates,20G,21L,1.5211,mixed
 rates,20G,22A,0.80011,mixed
 no_GtoT_rates,20G,22A,0.32896,mixed
+no_CtoT_rates,20G,22A,1.4747,mixed
+no_CtoT_orGtoT_rates,20G,22A,0.15694,mixed
 clr_rates,20G,22A,0.75529,mixed
 rates,20G,22B,0.76436,mixed
 no_GtoT_rates,20G,22B,0.4458,mixed
+no_CtoT_rates,20G,22B,1.4205,mixed
+no_CtoT_orGtoT_rates,20G,22B,0.22583,mixed
 clr_rates,20G,22B,0.76224,mixed
 rates,20G,22C,0.8086,mixed
 no_GtoT_rates,20G,22C,0.36998,mixed
+no_CtoT_rates,20G,22C,1.5082,mixed
+no_CtoT_orGtoT_rates,20G,22C,0.1929,mixed
 clr_rates,20G,22C,0.72416,mixed
 rates,20I,21C,0.12279,not Omicron
 no_GtoT_rates,20I,21C,0.1197,not Omicron
+no_CtoT_rates,20I,21C,0.19344,not Omicron
+no_CtoT_orGtoT_rates,20I,21C,0.23591,not Omicron
 clr_rates,20I,21C,1.3297,not Omicron
 rates,20I,21I,0.49799,not Omicron
 no_GtoT_rates,20I,21I,0.46121,not Omicron
+no_CtoT_rates,20I,21I,0.17273,not Omicron
+no_CtoT_orGtoT_rates,20I,21I,0.22187,not Omicron
 clr_rates,20I,21I,0.95944,not Omicron
 rates,20I,21J,0.46982,not Omicron
 no_GtoT_rates,20I,21J,0.47239,not Omicron
+no_CtoT_rates,20I,21J,0.13049,not Omicron
+no_CtoT_orGtoT_rates,20I,21J,0.14696,not Omicron
 clr_rates,20I,21J,0.71086,not Omicron
 rates,20I,21K,1.0466,mixed
 no_GtoT_rates,20I,21K,0.44497,mixed
+no_CtoT_rates,20I,21K,1.8839,mixed
+no_CtoT_orGtoT_rates,20I,21K,0.20308,mixed
 clr_rates,20I,21K,1.2684,mixed
 rates,20I,21L,0.8923,mixed
 no_GtoT_rates,20I,21L,0.28157,mixed
+no_CtoT_rates,20I,21L,1.5942,mixed
+no_CtoT_orGtoT_rates,20I,21L,0.14211,mixed
 clr_rates,20I,21L,0.83087,mixed
 rates,20I,22A,0.82315,mixed
 no_GtoT_rates,20I,22A,0.32186,mixed
+no_CtoT_rates,20I,22A,1.4549,mixed
+no_CtoT_orGtoT_rates,20I,22A,0.42338,mixed
 clr_rates,20I,22A,1.7232,mixed
 rates,20I,22B,0.78318,mixed
 no_GtoT_rates,20I,22B,0.4341,mixed
+no_CtoT_rates,20I,22B,1.4118,mixed
+no_CtoT_orGtoT_rates,20I,22B,0.49816,mixed
 clr_rates,20I,22B,1.6887,mixed
 rates,20I,22C,0.81371,mixed
 no_GtoT_rates,20I,22C,0.30721,mixed
+no_CtoT_rates,20I,22C,1.4609,mixed
+no_CtoT_orGtoT_rates,20I,22C,0.25944,mixed
 clr_rates,20I,22C,1.6753,mixed
 rates,21C,21I,0.55387,not Omicron
 no_GtoT_rates,21C,21I,0.48092,not Omicron
+no_CtoT_rates,21C,21I,0.17702,not Omicron
+no_CtoT_orGtoT_rates,21C,21I,0.17583,not Omicron
 clr_rates,21C,21I,0.80188,not Omicron
 rates,21C,21J,0.52738,not Omicron
 no_GtoT_rates,21C,21J,0.50114,not Omicron
+no_CtoT_rates,21C,21J,0.14232,not Omicron
+no_CtoT_orGtoT_rates,21C,21J,0.18611,not Omicron
 clr_rates,21C,21J,1.0891,not Omicron
 rates,21C,21K,0.99092,mixed
 no_GtoT_rates,21C,21K,0.45977,mixed
+no_CtoT_rates,21C,21K,1.807,mixed
+no_CtoT_orGtoT_rates,21C,21K,0.097268,mixed
 clr_rates,21C,21K,0.96902,mixed
 rates,21C,21L,0.83576,mixed
 no_GtoT_rates,21C,21L,0.30632,mixed
+no_CtoT_rates,21C,21L,1.5237,mixed
+no_CtoT_orGtoT_rates,21C,21L,0.15017,mixed
 clr_rates,21C,21L,1.1567,mixed
 rates,21C,22A,0.75342,mixed
 no_GtoT_rates,21C,22A,0.29685,mixed
+no_CtoT_rates,21C,22A,1.3608,mixed
+no_CtoT_orGtoT_rates,21C,22A,0.26948,mixed
 clr_rates,21C,22A,0.81144,mixed
 rates,21C,22B,0.71763,mixed
 no_GtoT_rates,21C,22B,0.41537,mixed
+no_CtoT_rates,21C,22B,1.3134,mixed
+no_CtoT_orGtoT_rates,21C,22B,0.34909,mixed
 clr_rates,21C,22B,0.82838,mixed
 rates,21C,22C,0.75241,mixed
 no_GtoT_rates,21C,22C,0.31007,mixed
+no_CtoT_rates,21C,22C,1.3795,mixed
+no_CtoT_orGtoT_rates,21C,22C,0.14325,mixed
 clr_rates,21C,22C,0.76052,mixed
 rates,21I,21J,0.082079,not Omicron
 no_GtoT_rates,21I,21J,0.061996,not Omicron
+no_CtoT_rates,21I,21J,0.1411,not Omicron
+no_CtoT_orGtoT_rates,21I,21J,0.10909,not Omicron
 clr_rates,21I,21J,0.39961,not Omicron
 rates,21I,21K,1.2823,mixed
 no_GtoT_rates,21I,21K,0.10967,mixed
+no_CtoT_rates,21I,21K,1.9294,mixed
+no_CtoT_orGtoT_rates,21I,21K,0.20385,mixed
 clr_rates,21I,21K,1.0911,mixed
 rates,21I,21L,1.1776,mixed
 no_GtoT_rates,21I,21L,0.19169,mixed
+no_CtoT_rates,21I,21L,1.6404,mixed
+no_CtoT_orGtoT_rates,21I,21L,0.15182,mixed
 clr_rates,21I,21L,0.89342,mixed
 rates,21I,22A,1.1042,mixed
 no_GtoT_rates,21I,22A,0.26309,mixed
+no_CtoT_rates,21I,22A,1.4786,mixed
+no_CtoT_orGtoT_rates,21I,22A,0.28377,mixed
 clr_rates,21I,22A,1.195,mixed
 rates,21I,22B,1.0111,mixed
 no_GtoT_rates,21I,22B,0.22775,mixed
+no_CtoT_rates,21I,22B,1.4309,mixed
+no_CtoT_orGtoT_rates,21I,22B,0.36577,mixed
 clr_rates,21I,22B,1.1097,mixed
 rates,21I,22C,1.0886,mixed
 no_GtoT_rates,21I,22C,0.18959,mixed
+no_CtoT_rates,21I,22C,1.4967,mixed
+no_CtoT_orGtoT_rates,21I,22C,0.15022,mixed
 clr_rates,21I,22C,1.0897,mixed
 rates,21J,21K,1.2189,mixed
 no_GtoT_rates,21J,21K,0.10269,mixed
+no_CtoT_rates,21J,21K,1.8137,mixed
+no_CtoT_orGtoT_rates,21J,21K,0.17566,mixed
 clr_rates,21J,21K,1.1557,mixed
 rates,21J,21L,1.1162,mixed
 no_GtoT_rates,21J,21L,0.20056,mixed
+no_CtoT_rates,21J,21L,1.5232,mixed
+no_CtoT_orGtoT_rates,21J,21L,0.087937,mixed
 clr_rates,21J,21L,0.7808,mixed
 rates,21J,22A,1.0506,mixed
 no_GtoT_rates,21J,22A,0.30255,mixed
+no_CtoT_rates,21J,22A,1.3769,mixed
+no_CtoT_orGtoT_rates,21J,22A,0.35753,mixed
 clr_rates,21J,22A,1.4544,mixed
 rates,21J,22B,0.95807,mixed
 no_GtoT_rates,21J,22B,0.27182,mixed
+no_CtoT_rates,21J,22B,1.3338,mixed
+no_CtoT_orGtoT_rates,21J,22B,0.43968,mixed
 clr_rates,21J,22B,1.3828,mixed
 rates,21J,22C,1.0298,mixed
 no_GtoT_rates,21J,22C,0.21359,mixed
+no_CtoT_rates,21J,22C,1.3844,mixed
+no_CtoT_orGtoT_rates,21J,22C,0.17156,mixed
 clr_rates,21J,22C,1.367,mixed
 rates,21K,21L,0.19301,Omicron
 no_GtoT_rates,21K,21L,0.17256,Omicron
+no_CtoT_rates,21K,21L,0.30337,Omicron
+no_CtoT_orGtoT_rates,21K,21L,0.11487,Omicron
 clr_rates,21K,21L,0.60464,Omicron
 rates,21K,22A,0.30573,Omicron
 no_GtoT_rates,21K,22A,0.25953,Omicron
+no_CtoT_rates,21K,22A,0.53601,Omicron
+no_CtoT_orGtoT_rates,21K,22A,0.31964,Omicron
 clr_rates,21K,22A,0.87132,Omicron
 rates,21K,22B,0.35643,Omicron
 no_GtoT_rates,21K,22B,0.23311,Omicron
+no_CtoT_rates,21K,22B,0.62388,Omicron
+no_CtoT_orGtoT_rates,21K,22B,0.40049,Omicron
 clr_rates,21K,22B,0.84266,Omicron
 rates,21K,22C,0.25657,Omicron
 no_GtoT_rates,21K,22C,0.17402,Omicron
+no_CtoT_rates,21K,22C,0.44684,Omicron
+no_CtoT_orGtoT_rates,21K,22C,0.13862,Omicron
 clr_rates,21K,22C,0.83699,Omicron
 rates,21L,22A,0.18353,Omicron
 no_GtoT_rates,21L,22A,0.17908,Omicron
+no_CtoT_rates,21L,22A,0.33584,Omicron
+no_CtoT_orGtoT_rates,21L,22A,0.33777,Omicron
 clr_rates,21L,22A,1.2415,Omicron
 rates,21L,22B,0.27628,Omicron
 no_GtoT_rates,21L,22B,0.23456,Omicron
+no_CtoT_rates,21L,22B,0.42653,Omicron
+no_CtoT_orGtoT_rates,21L,22B,0.41937,Omicron
 clr_rates,21L,22B,1.185,Omicron
 rates,21L,22C,0.11867,Omicron
 no_GtoT_rates,21L,22C,0.084721,Omicron
+no_CtoT_rates,21L,22C,0.19821,Omicron
+no_CtoT_orGtoT_rates,21L,22C,0.1588,Omicron
 clr_rates,21L,22C,1.1765,Omicron
 rates,22A,22B,0.14527,Omicron
 no_GtoT_rates,22A,22B,0.12733,Omicron
+no_CtoT_rates,22A,22B,0.11556,Omicron
+no_CtoT_orGtoT_rates,22A,22B,0.11632,Omicron
 clr_rates,22A,22B,0.32766,Omicron
 rates,22A,22C,0.1292,Omicron
 no_GtoT_rates,22A,22C,0.14336,Omicron
+no_CtoT_rates,22A,22C,0.22508,Omicron
+no_CtoT_orGtoT_rates,22A,22C,0.26473,Omicron
 clr_rates,22A,22C,0.26659,Omicron
 rates,22B,22C,0.2042,Omicron
 no_GtoT_rates,22B,22C,0.20393,Omicron
+no_CtoT_rates,22B,22C,0.31638,Omicron
+no_CtoT_orGtoT_rates,22B,22C,0.35939,Omicron
 clr_rates,22B,22C,0.29981,Omicron
